@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0CED9BC41C5B0DC0007A19BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BC31C5B0DC0007A19BD /* AppDelegate.swift */; };
-		0CED9BC61C5B0DC0007A19BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BC51C5B0DC0007A19BD /* ViewController.swift */; };
 		0CED9BC91C5B0DC0007A19BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CED9BC71C5B0DC0007A19BD /* Main.storyboard */; };
 		0CED9BCB1C5B0DC0007A19BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CED9BCA1C5B0DC0007A19BD /* Assets.xcassets */; };
 		0CED9BCE1C5B0DC0007A19BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CED9BCC1C5B0DC0007A19BD /* LaunchScreen.storyboard */; };
 		0CED9BD91C5B0DC0007A19BD /* LuckyRondomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BD81C5B0DC0007A19BD /* LuckyRondomTests.swift */; };
 		0CED9BE41C5B0DC1007A19BD /* LuckyRondomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BE31C5B0DC1007A19BD /* LuckyRondomUITests.swift */; };
+		0CED9BFA1C5B21D2007A19BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		0CED9BC01C5B0DC0007A19BD /* LuckyRondom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyRondom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CED9BC31C5B0DC0007A19BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CED9BC51C5B0DC0007A19BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CED9BC81C5B0DC0007A19BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CED9BCA1C5B0DC0007A19BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CED9BCD1C5B0DC0007A19BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		0CED9BDF1C5B0DC0007A19BD /* LuckyRondomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuckyRondomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CED9BE31C5B0DC1007A19BD /* LuckyRondomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyRondomUITests.swift; sourceTree = "<group>"; };
 		0CED9BE51C5B0DC1007A19BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				0CED9BC31C5B0DC0007A19BD /* AppDelegate.swift */,
-				0CED9BC51C5B0DC0007A19BD /* ViewController.swift */,
+				0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */,
 				0CED9BC71C5B0DC0007A19BD /* Main.storyboard */,
 				0CED9BCA1C5B0DC0007A19BD /* Assets.xcassets */,
 				0CED9BCC1C5B0DC0007A19BD /* LaunchScreen.storyboard */,
@@ -256,8 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CED9BC61C5B0DC0007A19BD /* ViewController.swift in Sources */,
 				0CED9BC41C5B0DC0007A19BD /* AppDelegate.swift in Sources */,
+				0CED9BFA1C5B21D2007A19BD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +484,7 @@
 				0CED9BEA1C5B0DC1007A19BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CED9BEB1C5B0DC1007A19BD /* Build configuration list for PBXNativeTarget "LuckyRondomTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +493,7 @@
 				0CED9BED1C5B0DC1007A19BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CED9BEE1C5B0DC1007A19BD /* Build configuration list for PBXNativeTarget "LuckyRondomUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +502,7 @@
 				0CED9BF01C5B0DC1007A19BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
