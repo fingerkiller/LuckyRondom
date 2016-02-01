@@ -14,6 +14,9 @@
 		0CED9BD91C5B0DC0007A19BD /* LuckyRondomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BD81C5B0DC0007A19BD /* LuckyRondomTests.swift */; };
 		0CED9BE41C5B0DC1007A19BD /* LuckyRondomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BE31C5B0DC1007A19BD /* LuckyRondomUITests.swift */; };
 		0CED9BFA1C5B21D2007A19BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */; };
+		0CED9BFC1C5F102F007A19BD /* RandomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BFB1C5F102F007A19BD /* RandomCollectionViewController.swift */; };
+		0CED9C001C5F2D6D007A19BD /* LKDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */; };
+		6811BCA4C7C638396652D2BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF49F363171D8DAD378AF0E6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		0CED9BE31C5B0DC1007A19BD /* LuckyRondomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyRondomUITests.swift; sourceTree = "<group>"; };
 		0CED9BE51C5B0DC1007A19BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0CED9BFB1C5F102F007A19BD /* RandomCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCollectionViewController.swift; sourceTree = "<group>"; };
+		0CED9BFD1C5F1ADA007A19BD /* LuckyRondom-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LuckyRondom-Bridging-Header.h"; sourceTree = "<group>"; };
+		0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKDbManager.swift; sourceTree = "<group>"; };
+		63AD339E5FEC3C18FCA8F90E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8319D9E7C19ADB8A6E728870 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AF49F363171D8DAD378AF0E6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6811BCA4C7C638396652D2BE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,8 @@
 				0CED9BD71C5B0DC0007A19BD /* LuckyRondomTests */,
 				0CED9BE21C5B0DC1007A19BD /* LuckyRondomUITests */,
 				0CED9BC11C5B0DC0007A19BD /* Products */,
+				2151319D3AEE08AAB8453345 /* Pods */,
+				A399E19CB82E4E8268943E78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +109,15 @@
 		0CED9BC21C5B0DC0007A19BD /* LuckyRondom */ = {
 			isa = PBXGroup;
 			children = (
+				0CED9BFE1C5F2985007A19BD /* DB */,
 				0CED9BC31C5B0DC0007A19BD /* AppDelegate.swift */,
 				0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */,
+				0CED9BFB1C5F102F007A19BD /* RandomCollectionViewController.swift */,
 				0CED9BC71C5B0DC0007A19BD /* Main.storyboard */,
 				0CED9BCA1C5B0DC0007A19BD /* Assets.xcassets */,
 				0CED9BCC1C5B0DC0007A19BD /* LaunchScreen.storyboard */,
 				0CED9BCF1C5B0DC0007A19BD /* Info.plist */,
+				0CED9BFD1C5F1ADA007A19BD /* LuckyRondom-Bridging-Header.h */,
 			);
 			path = LuckyRondom;
 			sourceTree = "<group>";
@@ -125,6 +140,31 @@
 			path = LuckyRondomUITests;
 			sourceTree = "<group>";
 		};
+		0CED9BFE1C5F2985007A19BD /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		2151319D3AEE08AAB8453345 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63AD339E5FEC3C18FCA8F90E /* Pods.debug.xcconfig */,
+				8319D9E7C19ADB8A6E728870 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A399E19CB82E4E8268943E78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF49F363171D8DAD378AF0E6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CED9BE81C5B0DC1007A19BD /* Build configuration list for PBXNativeTarget "LuckyRondom" */;
 			buildPhases = (
+				14E56DF7B13EFB339D27A521 /* Check Pods Manifest.lock */,
 				0CED9BBC1C5B0DC0007A19BD /* Sources */,
 				0CED9BBD1C5B0DC0007A19BD /* Frameworks */,
 				0CED9BBE1C5B0DC0007A19BD /* Resources */,
+				73BEA5AB0D5C1FFFDFB2DB4A /* Embed Pods Frameworks */,
+				D1DB7BB6F5F660AE12EE78B2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,12 +294,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14E56DF7B13EFB339D27A521 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		73BEA5AB0D5C1FFFDFB2DB4A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1DB7BB6F5F660AE12EE78B2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0CED9BBC1C5B0DC0007A19BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CED9C001C5F2D6D007A19BD /* LKDbManager.swift in Sources */,
 				0CED9BC41C5B0DC0007A19BD /* AppDelegate.swift in Sources */,
+				0CED9BFC1C5F102F007A19BD /* RandomCollectionViewController.swift in Sources */,
 				0CED9BFA1C5B21D2007A19BD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,23 +490,27 @@
 		};
 		0CED9BE91C5B0DC1007A19BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63AD339E5FEC3C18FCA8F90E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LuckyRondom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.waytl.LuckyRondom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LuckyRondom/LuckyRondom-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		0CED9BEA1C5B0DC1007A19BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8319D9E7C19ADB8A6E728870 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LuckyRondom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.waytl.LuckyRondom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LuckyRondom/LuckyRondom-Bridging-Header.h";
 			};
 			name = Release;
 		};
