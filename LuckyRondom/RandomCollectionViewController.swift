@@ -12,6 +12,8 @@ private let reuseIdentifier = "randomCell"
 
 class RandomCollectionViewController: UICollectionViewController {
 
+    var  bucket:LkBucket?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
