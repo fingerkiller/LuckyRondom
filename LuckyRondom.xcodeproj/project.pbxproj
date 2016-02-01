@@ -16,6 +16,8 @@
 		0CED9BFA1C5B21D2007A19BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */; };
 		0CED9BFC1C5F102F007A19BD /* RandomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BFB1C5F102F007A19BD /* RandomCollectionViewController.swift */; };
 		0CED9C001C5F2D6D007A19BD /* LKDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */; };
+		0CED9C031C5F38C6007A19BD /* LkBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9C021C5F38C6007A19BD /* LkBucket.swift */; };
+		0CED9C051C5F3D94007A19BD /* LKCandy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9C041C5F3D94007A19BD /* LKCandy.swift */; };
 		6811BCA4C7C638396652D2BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF49F363171D8DAD378AF0E6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		0CED9BFB1C5F102F007A19BD /* RandomCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCollectionViewController.swift; sourceTree = "<group>"; };
 		0CED9BFD1C5F1ADA007A19BD /* LuckyRondom-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LuckyRondom-Bridging-Header.h"; sourceTree = "<group>"; };
 		0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKDbManager.swift; sourceTree = "<group>"; };
+		0CED9C021C5F38C6007A19BD /* LkBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LkBucket.swift; sourceTree = "<group>"; };
+		0CED9C041C5F3D94007A19BD /* LKCandy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCandy.swift; sourceTree = "<group>"; };
 		63AD339E5FEC3C18FCA8F90E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8319D9E7C19ADB8A6E728870 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AF49F363171D8DAD378AF0E6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,7 @@
 		0CED9BC21C5B0DC0007A19BD /* LuckyRondom */ = {
 			isa = PBXGroup;
 			children = (
+				0CED9C011C5F38B1007A19BD /* domain */,
 				0CED9BFE1C5F2985007A19BD /* DB */,
 				0CED9BC31C5B0DC0007A19BD /* AppDelegate.swift */,
 				0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */,
@@ -146,6 +151,15 @@
 				0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		0CED9C011C5F38B1007A19BD /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				0CED9C021C5F38C6007A19BD /* LkBucket.swift */,
+				0CED9C041C5F3D94007A19BD /* LKCandy.swift */,
+			);
+			path = domain;
 			sourceTree = "<group>";
 		};
 		2151319D3AEE08AAB8453345 /* Pods */ = {
@@ -230,6 +244,7 @@
 		0CED9BB81C5B0DC0007A19BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LK;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = py;
@@ -351,6 +366,8 @@
 				0CED9BC41C5B0DC0007A19BD /* AppDelegate.swift in Sources */,
 				0CED9BFC1C5F102F007A19BD /* RandomCollectionViewController.swift in Sources */,
 				0CED9BFA1C5B21D2007A19BD /* HomeViewController.swift in Sources */,
+				0CED9C051C5F3D94007A19BD /* LKCandy.swift in Sources */,
+				0CED9C031C5F38C6007A19BD /* LkBucket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

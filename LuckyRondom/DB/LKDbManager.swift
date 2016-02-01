@@ -40,7 +40,9 @@ class LKDbManager: NSObject {
             
             dbbase.setKey("feixue")
             
-           try!dbbase.executeUpdate("create table if not exists USER (AccountID TEXT PRIMARY KEY NOT NULL, Account TEXT(1024,0) NOT NULL,Name TEXT ,  Email TEXT , Telephone TEXT, FaceID TEXT, Signature TEXT )", values: [])
+            try!dbbase.executeUpdate("create table if not exists Bucket (BucketID TEXT  NOT NULL, MyAccountID TEXT,BucketName TEXT, BucketHeaderPath TEXT,BucketResultNum INTEGER, PRIMARY KEY(BucketID,MyAccountID))", values: [])
+            
+            try!dbbase.executeUpdate("create table if not exists Candy (CandyID TEXT  NOT NULL,BucketID TEXT  NOT NULL, MyAccountID TEXT,CandyName TEXT, CandyimagePath TEXT, PRIMARY KEY(CandyID,MyAccountID))", values: [])
             
         })
     }
