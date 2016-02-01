@@ -38,6 +38,7 @@ class LKDbManager: NSObject {
     {
         lkDbBase?.inDatabase({ (dbbase:FMDatabase!) -> Void in
             
+            dbbase.setKey("feixue")
             
            try!dbbase.executeUpdate("create table if not exists USER (AccountID TEXT PRIMARY KEY NOT NULL, Account TEXT(1024,0) NOT NULL,Name TEXT ,  Email TEXT , Telephone TEXT, FaceID TEXT, Signature TEXT )", values: [])
             

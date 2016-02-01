@@ -26,7 +26,7 @@
                   moduleName = "LuckyRondom"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/DB/LKDbManager.swift"
-                  timestampString = "476001848.065645"
+                  timestampString = "476002176.355579"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -41,7 +41,7 @@
                   moduleName = "LuckyRondom"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/DB/LKDbManager.swift"
-                  timestampString = "476001848.06613"
+                  timestampString = "476002176.356079"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -58,45 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LuckyRondom/DB/LKDbManager.swift"
-            timestampString = "476001987.591796"
+            timestampString = "476002148.845964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "createTables()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LuckyRondom.LKDbManager.createTables (LuckyRondom.LKDbManager)() -&gt; ()"
-                  moduleName = "LuckyRondom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/DB/LKDbManager.swift"
-                  timestampString = "476001987.594978"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "22">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LuckyRondom.LKDbManager.(createTables (LuckyRondom.LKDbManager) -&gt; () -&gt; ()).(closure #1)"
-                  moduleName = "LuckyRondom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/DB/LKDbManager.swift"
-                  timestampString = "476001987.595216"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "15">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
