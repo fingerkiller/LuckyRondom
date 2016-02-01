@@ -18,6 +18,9 @@
 		0CED9C001C5F2D6D007A19BD /* LKDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */; };
 		0CED9C031C5F38C6007A19BD /* LkBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9C021C5F38C6007A19BD /* LkBucket.swift */; };
 		0CED9C051C5F3D94007A19BD /* LKCandy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9C041C5F3D94007A19BD /* LKCandy.swift */; };
+		0CED9C091C5F421D007A19BD /* LKBucketDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9C081C5F421D007A19BD /* LKBucketDao.swift */; };
+		0CED9C0B1C5F5A69007A19BD /* LKAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9C0A1C5F5A69007A19BD /* LKAccount.swift */; };
+		0CED9C0D1C5F6202007A19BD /* LKCandyDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9C0C1C5F6202007A19BD /* LKCandyDao.swift */; };
 		6811BCA4C7C638396652D2BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF49F363171D8DAD378AF0E6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKDbManager.swift; sourceTree = "<group>"; };
 		0CED9C021C5F38C6007A19BD /* LkBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LkBucket.swift; sourceTree = "<group>"; };
 		0CED9C041C5F3D94007A19BD /* LKCandy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCandy.swift; sourceTree = "<group>"; };
+		0CED9C081C5F421D007A19BD /* LKBucketDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKBucketDao.swift; sourceTree = "<group>"; };
+		0CED9C0A1C5F5A69007A19BD /* LKAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKAccount.swift; sourceTree = "<group>"; };
+		0CED9C0C1C5F6202007A19BD /* LKCandyDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCandyDao.swift; sourceTree = "<group>"; };
 		63AD339E5FEC3C18FCA8F90E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8319D9E7C19ADB8A6E728870 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AF49F363171D8DAD378AF0E6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				0CED9BFF1C5F2D6D007A19BD /* LKDbManager.swift */,
+				0CED9C081C5F421D007A19BD /* LKBucketDao.swift */,
+				0CED9C0C1C5F6202007A19BD /* LKCandyDao.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			children = (
 				0CED9C021C5F38C6007A19BD /* LkBucket.swift */,
 				0CED9C041C5F3D94007A19BD /* LKCandy.swift */,
+				0CED9C0A1C5F5A69007A19BD /* LKAccount.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -362,11 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CED9C091C5F421D007A19BD /* LKBucketDao.swift in Sources */,
 				0CED9C001C5F2D6D007A19BD /* LKDbManager.swift in Sources */,
 				0CED9BC41C5B0DC0007A19BD /* AppDelegate.swift in Sources */,
 				0CED9BFC1C5F102F007A19BD /* RandomCollectionViewController.swift in Sources */,
 				0CED9BFA1C5B21D2007A19BD /* HomeViewController.swift in Sources */,
 				0CED9C051C5F3D94007A19BD /* LKCandy.swift in Sources */,
+				0CED9C0D1C5F6202007A19BD /* LKCandyDao.swift in Sources */,
+				0CED9C0B1C5F5A69007A19BD /* LKAccount.swift in Sources */,
 				0CED9C031C5F38C6007A19BD /* LkBucket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

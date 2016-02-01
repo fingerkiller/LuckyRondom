@@ -10,9 +10,12 @@ import UIKit
 
 class HomeViewController: UITableViewController {
 
+    var bucketsArr:Array<LkBucket>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        bucketsArr = LKBucketDao.getAllBuckets()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,7 +37,7 @@ class HomeViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return bucketsArr!.count
     }
 
     
@@ -42,7 +45,10 @@ class HomeViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath)
 
         // Configure the cell...
-
+        let bucket:LkBucket = bucketsArr![indexPath.row]
+        
+        cell.textLabel?.text = bucket.name
+        
         return cell
     }
 

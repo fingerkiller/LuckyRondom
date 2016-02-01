@@ -10,6 +10,7 @@ import UIKit
 
 class LKCandy: NSObject {
 
+    var bucketID:String?
     var ID:String?
     var name:String?
     var imagePath:String?

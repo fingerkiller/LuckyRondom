@@ -16,7 +16,7 @@ class LkBucket: NSObject {
     
     var headerPath:String?//图片路径
     
-    var resultNum:NSInteger?//结果数
+    var resultNum:Int?//结果数
     
     var sourceCandies:NSMutableArray?//数据源
     

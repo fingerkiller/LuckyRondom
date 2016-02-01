@@ -14,8 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var a:LKDbManager = LKDbManager.sharedInstance;
     
+    
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let abucket:LkBucket = LkBucket()
+        
+        abucket.ID = "sfd"
+        abucket.name = "dddd"
+        abucket.headerPath = "ddd"
+        abucket.resultNum = 1
+        
+        LKBucketDao.saveBucket(abucket)
+        
         return true
     }
 
