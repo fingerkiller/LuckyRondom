@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--randoms-->
@@ -32,11 +33,125 @@
                             <outlet property="delegate" destination="Vws-aX-yQq" id="kGM-mz-di3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="randoms" id="Z1K-JI-RoY"/>
+                    <navigationItem key="navigationItem" title="randoms" id="Z1K-JI-RoY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Moj-dL-Dv1">
+                            <connections>
+                                <segue destination="83p-56-tA1" kind="show" identifier="addBucket" id="8h4-W2-xEA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svT-vb-JPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-206" y="-126"/>
+        </scene>
+        <!--编辑-->
+        <scene sceneID="prr-Kb-USI">
+            <objects>
+                <viewController id="83p-56-tA1" customClass="LKBucketEditViewController" customModule="LuckyRondom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sbk-y0-pCi"/>
+                        <viewControllerLayoutGuide type="bottom" id="65o-xg-J3U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IrL-cR-ZGI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-9o-CiB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="candycell" id="e3N-Gx-xz0">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3N-Gx-xz0" id="YLb-bZ-YEU">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="83p-56-tA1" id="cdx-eV-aaY"/>
+                                    <outlet property="delegate" destination="83p-56-tA1" id="TDV-xl-RHg"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE3-o2-k2r">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2bb-Sq-wFB"/>
+                                    <barButtonItem title="编辑" id="RHo-k3-VEa"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oqH-iH-B1I"/>
+                                    <barButtonItem title="添加" id="8vc-6Q-aei">
+                                        <connections>
+                                            <segue destination="Ukk-oU-sAu" kind="show" id="uJa-RK-Zfc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gaV-kh-noY"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AE3-o2-k2r" firstAttribute="trailing" secondItem="qC4-9o-CiB" secondAttribute="trailing" id="F8p-DH-wda"/>
+                            <constraint firstItem="qC4-9o-CiB" firstAttribute="leading" secondItem="IrL-cR-ZGI" secondAttribute="leading" id="Kib-aV-0Np"/>
+                            <constraint firstItem="AE3-o2-k2r" firstAttribute="top" secondItem="qC4-9o-CiB" secondAttribute="bottom" id="glN-2x-ePl"/>
+                            <constraint firstItem="qC4-9o-CiB" firstAttribute="bottom" secondItem="65o-xg-J3U" secondAttribute="top" constant="-44" id="k6m-1r-KPU"/>
+                            <constraint firstAttribute="trailing" secondItem="qC4-9o-CiB" secondAttribute="trailing" id="v5u-Xb-VSj"/>
+                            <constraint firstItem="qC4-9o-CiB" firstAttribute="top" secondItem="IrL-cR-ZGI" secondAttribute="topMargin" id="xdM-JM-1BP"/>
+                            <constraint firstItem="AE3-o2-k2r" firstAttribute="leading" secondItem="qC4-9o-CiB" secondAttribute="leading" id="zOm-Sq-i7N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="编辑" id="5GW-xd-zTo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="L2C-K2-sBs">
+                            <connections>
+                                <action selector="saveBucket" destination="83p-56-tA1" id="T6a-Gi-UHn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bktableview" destination="qC4-9o-CiB" id="ck6-Mm-XVu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUS-WA-HJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="651"/>
+        </scene>
+        <!--candy edit-->
+        <scene sceneID="yne-v1-YSh">
+            <objects>
+                <tableViewController id="Ukk-oU-sAu" customClass="LKCandyEditViewController" customModule="LuckyRondom" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="kIt-TR-M6i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="candyeditCell" rowHeight="150" id="LFt-vA-7QY">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LFt-vA-7QY" id="jFr-dS-ajO">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ukk-oU-sAu" id="twz-fC-Kbq"/>
+                            <outlet property="delegate" destination="Ukk-oU-sAu" id="ktW-Ty-fWx"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="candy edit" id="YYF-6o-wvr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="c7j-P5-LSW">
+                            <connections>
+                                <action selector="saveCandy" destination="Ukk-oU-sAu" id="mwx-92-axe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8WO-dK-gcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491" y="651"/>
         </scene>
         <!--Random Collection View Controller-->
         <scene sceneID="lxP-Ai-ctW">

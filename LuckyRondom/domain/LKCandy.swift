@@ -8,11 +8,20 @@
 
 import UIKit
 
-class LKCandy: NSObject {
+public class LKCandy: NSObject {
 
     var bucketID:String?
     var ID:String?
     var name:String?
     var imagePath:String?
+    
+    override init()
+    {
+        super.init()
+        
+        self.ID = NSObject.randomID();
+        self.name = ""
+        self.imagePath = ""
+    }
     
 }

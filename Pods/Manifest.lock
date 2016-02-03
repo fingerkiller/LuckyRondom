@@ -1,17 +1,23 @@
 PODS:
   - FMDB/SQLCipher (2.6):
     - SQLCipher
+  - PureLayout (3.0.1)
   - SQLCipher (3.1.0):
     - SQLCipher/standard (= 3.1.0)
   - SQLCipher/common (3.1.0)
   - SQLCipher/standard (3.1.0):
     - SQLCipher/common
+  - VGParallaxHeader (0.0.6):
+    - PureLayout
 
 DEPENDENCIES:
   - FMDB/SQLCipher
+  - VGParallaxHeader (~> 0.0.6)
 
 SPEC CHECKSUMS:
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   SQLCipher: 4684434d5791db86512cd7e02172aefba575849e
+  VGParallaxHeader: 1213aba58c9b0aea84f9e81ad526fde57aa4fe48
 
 COCOAPODS: 0.39.0

@@ -18,7 +18,32 @@ class LkBucket: NSObject {
     
     var resultNum:Int?//结果数
     
-    var sourceCandies:NSMutableArray?//数据源
+    lazy var sourceCandies:NSMutableArray=NSMutableArray()//数据源
     
     var resultCandies:NSMutableArray?//结果集
+    
+    
+    override init() {
+        super.init()
+        self.ID = NSObject.randomID();
+        self.name = "";
+        self.headerPath = "";
+        self.resultNum = 1
+    }
+    
+    
+    func savetoLocal()
+    {
+        LKBucketDao.saveBucket(self)
+        
+    }
+    
+    
+    func saveCandy(candy:LKCandy)
+    {
+        candy.bucketID = self.ID
+        LKCandyDao.saveCandy(candy)
+        
+    }
+    
 }

@@ -96,11 +96,19 @@ class HomeViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
-        let bucket:LkBucket = bucketsArr![indexPath!.row]
+        if(segue.identifier == "addBucket")
+        {
+            
+        }
+        else
+        {
+            let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
+            let bucket:LkBucket = bucketsArr![indexPath!.row]
+            
+            let randomVC:RandomCollectionViewController = segue.destinationViewController as! RandomCollectionViewController
+            randomVC.bucket = bucket
+        }
         
-        let randomVC:RandomCollectionViewController = segue.destinationViewController as! RandomCollectionViewController
-        randomVC.bucket = bucket
     }
     
 
