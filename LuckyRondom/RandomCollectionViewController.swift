@@ -14,6 +14,15 @@ class RandomCollectionViewController: UICollectionViewController {
 
     var  bucket:LkBucket?
     
+    
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?)
+    {
+        
+        self.bucket?.rollCandy();
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

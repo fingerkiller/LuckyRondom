@@ -46,4 +46,29 @@ class LkBucket: NSObject {
         
     }
     
+    
+    func rollCandy()
+    {
+        let count = self.sourceCandies.count;
+        self.resultCandies = NSMutableArray()
+        var rollnum = resultNum;
+        while(rollnum>0)
+        {
+            let dex =  Int(arc4random()) % count
+            
+            let candy = self.sourceCandies[dex];
+            
+            if((self.resultCandies?.containsObject(candy)) != false)
+            {
+                continue
+            }
+            else
+            {
+                self.resultCandies?.addObject(candy)
+                rollnum=rollnum!-1;
+            }
+            
+        }
+    }
+    
 }
