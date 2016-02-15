@@ -21,7 +21,8 @@ class RandomCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.registerClass(LKCandyCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.registerNib(UINib(nibName: "LKCandyCollectionViewCell", bundle: nil) ,forCellWithReuseIdentifier: reuseIdentifier)
       
         // Do any additional setup after loading the view.
     }
@@ -55,11 +56,17 @@ class RandomCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! LKCandyCollectionViewCell
     
+        
         // Configure the cell
+        
+        let candy:LKCandy = (self.bucket?.sourceCandies[indexPath.row])! as! LKCandy;
+        
+        cell.titleLb.text = candy.name;
+        
         cell.backgroundColor = UIColor.redColor()
-        print(cell.subviews)
+        
         return cell
     }
 

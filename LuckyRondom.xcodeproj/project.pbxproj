@@ -11,6 +11,8 @@
 		0C0CCB731C61DA800006B6E7 /* NSObject+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CCB721C61DA800006B6E7 /* NSObject+helper.swift */; };
 		0C0CCB751C61DEB30006B6E7 /* shaizi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CCB741C61DEB30006B6E7 /* shaizi.jpg */; };
 		0C0CCB791C61E3ED0006B6E7 /* LKCandyEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CCB781C61E3ED0006B6E7 /* LKCandyEditViewController.swift */; };
+		0C0CCB7E1C71A9A20006B6E7 /* LKCandyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CCB7C1C71A9A20006B6E7 /* LKCandyCollectionViewCell.swift */; };
+		0C0CCB7F1C71A9A20006B6E7 /* LKCandyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CCB7D1C71A9A20006B6E7 /* LKCandyCollectionViewCell.xib */; };
 		0CED9BC41C5B0DC0007A19BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CED9BC31C5B0DC0007A19BD /* AppDelegate.swift */; };
 		0CED9BC91C5B0DC0007A19BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CED9BC71C5B0DC0007A19BD /* Main.storyboard */; };
 		0CED9BCB1C5B0DC0007A19BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CED9BCA1C5B0DC0007A19BD /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		0C0CCB721C61DA800006B6E7 /* NSObject+helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+helper.swift"; sourceTree = "<group>"; };
 		0C0CCB741C61DEB30006B6E7 /* shaizi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shaizi.jpg; sourceTree = "<group>"; };
 		0C0CCB781C61E3ED0006B6E7 /* LKCandyEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCandyEditViewController.swift; sourceTree = "<group>"; };
+		0C0CCB7C1C71A9A20006B6E7 /* LKCandyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCandyCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C0CCB7D1C71A9A20006B6E7 /* LKCandyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LKCandyCollectionViewCell.xib; sourceTree = "<group>"; };
 		0CED9BC01C5B0DC0007A19BD /* LuckyRondom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyRondom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CED9BC31C5B0DC0007A19BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CED9BC81C5B0DC0007A19BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				0CED9BC31C5B0DC0007A19BD /* AppDelegate.swift */,
 				0CED9BF91C5B21D2007A19BD /* HomeViewController.swift */,
 				0CED9BFB1C5F102F007A19BD /* RandomCollectionViewController.swift */,
+				0C0CCB7C1C71A9A20006B6E7 /* LKCandyCollectionViewCell.swift */,
+				0C0CCB7D1C71A9A20006B6E7 /* LKCandyCollectionViewCell.xib */,
 				0C0CCB6F1C61A9E70006B6E7 /* LKBucketEditViewController.swift */,
 				0C0CCB781C61E3ED0006B6E7 /* LKCandyEditViewController.swift */,
 				0CED9BC71C5B0DC0007A19BD /* Main.storyboard */,
@@ -319,6 +325,7 @@
 				0CED9BCE1C5B0DC0007A19BD /* LaunchScreen.storyboard in Resources */,
 				0C0CCB751C61DEB30006B6E7 /* shaizi.jpg in Resources */,
 				0CED9BCB1C5B0DC0007A19BD /* Assets.xcassets in Resources */,
+				0C0CCB7F1C71A9A20006B6E7 /* LKCandyCollectionViewCell.xib in Resources */,
 				0CED9BC91C5B0DC0007A19BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +402,7 @@
 				0CED9C091C5F421D007A19BD /* LKBucketDao.swift in Sources */,
 				0C0CCB791C61E3ED0006B6E7 /* LKCandyEditViewController.swift in Sources */,
 				0CED9C001C5F2D6D007A19BD /* LKDbManager.swift in Sources */,
+				0C0CCB7E1C71A9A20006B6E7 /* LKCandyCollectionViewCell.swift in Sources */,
 				0CED9BC41C5B0DC0007A19BD /* AppDelegate.swift in Sources */,
 				0CED9BFC1C5F102F007A19BD /* RandomCollectionViewController.swift in Sources */,
 				0CED9BFA1C5B21D2007A19BD /* HomeViewController.swift in Sources */,
