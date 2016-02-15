@@ -12,15 +12,27 @@ class HomeViewController: UITableViewController {
 
     var bucketsArr:Array<LkBucket>?
     
+    
+    func refreshView()
+    {
+        bucketsArr = LKBucketDao.getAllBuckets()
+        self.tableView.reloadData();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bucketsArr = LKBucketDao.getAllBuckets()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+       self.refreshView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,7 +116,7 @@ class HomeViewController: UITableViewController {
         {
             let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
             let bucket:LkBucket = bucketsArr![indexPath!.row]
-            
+            bucket.sourceCandies = LKCandyDao.getAllCandys(from: bucket.ID);
             let randomVC:RandomCollectionViewController = segue.destinationViewController as! RandomCollectionViewController
             randomVC.bucket = bucket
         }

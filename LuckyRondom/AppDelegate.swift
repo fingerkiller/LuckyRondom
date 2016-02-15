@@ -21,14 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        let abucket:LkBucket = LkBucket()
-        
-        abucket.ID = "sfd"
-        abucket.name = "dddd"
-        abucket.headerPath = "ddd"
-        abucket.resultNum = 1
-        
-        LKBucketDao.saveBucket(abucket)
         
         return true
     }

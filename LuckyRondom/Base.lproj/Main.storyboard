@@ -175,15 +175,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="159" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dx-vy-uym">
-                                            <rect key="frame" x="84" y="77" width="46" height="30"/>
-                                            <color key="backgroundColor" red="1" green="0.49605056400000003" blue="0.58226536390000005" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" title="Button"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FW-aL-CK2">
+                                            <rect key="frame" x="49" y="55" width="60" height="30"/>
+                                            <state key="normal" title="收拾收拾"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.47493994039999998" green="0.1172513177" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.47493994039999998" green="0.1172513177" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </collectionViewCell>
                         </cells>

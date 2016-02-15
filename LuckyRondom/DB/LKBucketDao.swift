@@ -77,7 +77,7 @@ class LKBucketDao: NSObject {
         
         dbq.lkDbBaseq?.inDatabase({ (dbp:FMDatabase!) -> Void in
             
-            _=try?dbp.executeUpdate("UPDATE Bucket SET BucketName = ?,BucketHeaderPath=?,BucketResultNum=? where BucketID = ?", values: [bucket.ID!,bucket.headerPath!,bucket.resultNum!,bucket.ID!]);
+            _=try?dbp.executeUpdate("UPDATE Bucket SET BucketName = ?,BucketHeaderPath=?,BucketResultNum=? where BucketID = ?", values: [bucket.name!,bucket.headerPath!,bucket.resultNum!,bucket.ID!]);
             
         })
     }

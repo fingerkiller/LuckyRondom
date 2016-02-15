@@ -81,10 +81,10 @@ class LKCandyDao: NSObject {
         })
     }
     
-    class func getAllCandys(from bucketID:String!)->Array<LKCandy>
+    class func getAllCandys(from bucketID:String!)->NSMutableArray
     {
         
-        var resultarr:Array<LKCandy> = Array()
+        let resultarr:NSMutableArray = NSMutableArray()
         
         let dbq:LKDbManager = LKDbManager.sharedInstance;
         
@@ -100,7 +100,7 @@ class LKCandyDao: NSObject {
                 candy.imagePath = resset.stringForColumn("CandyimagePath");
                 candy.ID = resset.stringForColumn("CandyID");
                 
-                resultarr.append(candy)
+                resultarr.addObject(candy)
                 
             }
             
