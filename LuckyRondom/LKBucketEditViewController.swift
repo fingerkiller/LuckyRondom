@@ -92,6 +92,27 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    
+    
+    // Override to support editing the table view.
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            
+             let candy:LKCandy = self.bucket.sourceCandies[indexPath.row] as! LKCandy
+            
+            LKCandyDao.deleteCandy(candy);
+            self.bucket.sourceCandies.removeObjectAtIndex(indexPath.row);
+            
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

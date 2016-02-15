@@ -70,6 +70,18 @@ class LKCandyDao: NSObject {
         })
     }
     
+    class func deleteAllCandys(from bucketID:String)
+    {
+        let dbq:LKDbManager = LKDbManager.sharedInstance;
+        
+        dbq.lkDbBaseq?.inDatabase({ (dbp:FMDatabase!) -> Void in
+            
+            _=try?dbp.executeUpdate("delete from Candy where BucketID = ?", values: [bucketID]);
+            
+        })
+    }
+    
+    
     class func updateCandy(candy:LKCandy)
     {
         let dbq:LKDbManager = LKDbManager.sharedInstance;
@@ -80,6 +92,7 @@ class LKCandyDao: NSObject {
             
         })
     }
+    
     
     class func getAllCandys(from bucketID:String!)->NSMutableArray
     {

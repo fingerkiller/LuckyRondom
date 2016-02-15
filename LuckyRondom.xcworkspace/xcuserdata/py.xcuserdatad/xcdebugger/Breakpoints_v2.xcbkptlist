@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LuckyRondom/RandomCollectionViewController.swift"
-            timestampString = "477217309.267762"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "motionEnded(_:withEvent:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "LuckyRondom/domain/LkBucket.swift"
             timestampString = "477216411.786446"
             startingColumnNumber = "9223372036854775807"
@@ -49,54 +33,6 @@
             endingLineNumber = "51"
             landmarkName = "rollCandy()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LuckyRondom/RandomCollectionViewController.swift"
-            timestampString = "477217309.267762"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "motionEnded(_:withEvent:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LuckyRondom.RandomCollectionViewController.motionEnded (LuckyRondom.RandomCollectionViewController)(__C.UIEventSubtype, withEvent : Swift.Optional&lt;__ObjC.UIEvent&gt;) -&gt; ()"
-                  moduleName = "LuckyRondom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/RandomCollectionViewController.swift"
-                  timestampString = "477217310.287577"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "993">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LuckyRondom.RandomCollectionViewController.(motionEnded (LuckyRondom.RandomCollectionViewController) -&gt; (__C.UIEventSubtype, withEvent : Swift.Optional&lt;__ObjC.UIEvent&gt;) -&gt; ()).(closure #1)"
-                  moduleName = "LuckyRondom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/RandomCollectionViewController.swift"
-                  timestampString = "477217310.28782"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
