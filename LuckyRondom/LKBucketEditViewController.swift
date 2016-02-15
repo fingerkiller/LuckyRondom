@@ -63,8 +63,10 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate {
         headerView.userInteractionEnabled = true;
         
         headerTF = UITextField.init(frame: CGRectMake(0, 200-30, headerView.frame.size.width, 30));
+        headerTF?.text = self.bucket.name;
         headerTF?.placeholder = "名称"
         headerView.addSubview(headerTF!)
+        
         
         
         bktableview.tableHeaderView = headerView

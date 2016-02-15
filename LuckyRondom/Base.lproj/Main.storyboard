@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svT-vb-JPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-206" y="-126"/>
+            <point key="canvasLocation" x="-230" y="-132"/>
         </scene>
         <!--编辑-->
         <scene sceneID="prr-Kb-USI">
@@ -153,7 +153,7 @@
             </objects>
             <point key="canvasLocation" x="491" y="651"/>
         </scene>
-        <!--Random Collection View Controller-->
+        <!--Run-->
         <scene sceneID="lxP-Ai-ctW">
             <objects>
                 <collectionViewController id="JWD-Nr-St3" customClass="RandomCollectionViewController" customModule="LuckyRondom" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,10 +173,17 @@
                             <outlet property="delegate" destination="JWD-Nr-St3" id="Rmm-lH-JvP"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Run" id="Ipt-jo-9a5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="jvN-Do-Pc8">
+                            <connections>
+                                <segue destination="83p-56-tA1" kind="show" identifier="edit" id="d1V-4Z-xeO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTp-vo-wLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491" y="-126"/>
+            <point key="canvasLocation" x="491" y="-132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aqS-gP-IGa">
@@ -195,4 +202,7 @@
             <point key="canvasLocation" x="-926" y="-126"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="d1V-4Z-xeO"/>
+    </inferredMetricsTieBreakers>
 </document>

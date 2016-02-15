@@ -99,7 +99,7 @@ class LKCandyDao: NSObject {
                 candy.name = resset.stringForColumn("CandyName")
                 candy.imagePath = resset.stringForColumn("CandyimagePath");
                 candy.ID = resset.stringForColumn("CandyID");
-                
+                candy.bucketID = bucketID;
                 resultarr.addObject(candy)
                 
             }
