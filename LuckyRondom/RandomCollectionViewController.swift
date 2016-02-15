@@ -21,6 +21,19 @@ class RandomCollectionViewController: UICollectionViewController {
         
         self.bucket?.rollCandy();
         
+        let candy:LKCandy = self.bucket?.resultCandies!.firstObject as! LKCandy;
+        
+        let alert = UIAlertController.init(title: candy.name, message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let alertaction = UIAlertAction.init(title: "ok", style: UIAlertActionStyle.Cancel) { (UIAlertAction) -> Void in
+            
+        }
+        
+        alert.addAction(alertaction);
+        
+        self.presentViewController(alert, animated: true) { () -> Void in
+            
+        }
     }
     
     override func viewDidLoad() {
