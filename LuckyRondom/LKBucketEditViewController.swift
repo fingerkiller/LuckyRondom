@@ -8,11 +8,13 @@
 
 import UIKit
 
-class LKBucketEditViewController: UIViewController,CandyEditDelegate {
+class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet var bktableview:UITableView!
     
+    
     private  var headerTF:UITextField?
+    private var headerImageView:UIImageView?
     private var _bucket:LkBucket?
     
     var bucket:LkBucket!{
@@ -38,7 +40,6 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate {
     func editFinshCandy(acandy : LKCandy)
     {
         
-        acandy.bucketID = self.bucket.ID
         self.bucket.saveCandy(acandy)
         self.bucket.sourceCandies.addObject(acandy)
         self.bktableview.reloadData()
@@ -55,22 +56,60 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate {
     
     
     
+    
+    
     func drawHeaderView()
     {
         
-        let headerView = UIImageView.init(frame: CGRectMake(0, 0, self.view.frame.size.width, 200))
-        headerView.image = UIImage.init(named: "shaizi.jpg")
-        headerView.userInteractionEnabled = true;
+        headerImageView = UIImageView.init(frame: CGRectMake(0, 0, self.view.frame.size.width, 200))
         
-        headerTF = UITextField.init(frame: CGRectMake(0, 200-30, headerView.frame.size.width, 30));
-        headerTF?.text = self.bucket.name;
+        if((self.bucket.headerFileName?.characters.count) <= 0)
+        {
+            headerImageView!.image = UIImage.init(named: "shaizi.jpg")
+        }
+        else
+        {
+            let image = UIImage.init(contentsOfFile: bucket.headerPath!)
+            headerImageView!.image = image
+        }
+        headerImageView!.userInteractionEnabled = true;
+        let tapges = UITapGestureRecognizer.init(target: self, action: Selector.init("showImagePicker"))
+        headerImageView!.addGestureRecognizer(tapges);
+        
+        
+        headerTF = UITextField.init(frame: CGRectMake(0, 200-30, headerImageView!.frame.size.width, 30));
+        headerTF?.text = self.bucket.title;
         headerTF?.placeholder = "名称"
-        headerView.addSubview(headerTF!)
+        headerImageView!.addSubview(headerTF!)
         
         
         
-        bktableview.tableHeaderView = headerView
+        bktableview.tableHeaderView = headerImageView
         
+        
+    }
+    
+    
+    
+    func showImagePicker()
+    {
+        
+        let imagePicker:UIImagePickerController = UIImagePickerController.init();
+        imagePicker.delegate = self;
+        self.presentViewController(imagePicker, animated: true) { () -> Void in
+            
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        
+        picker.dismissViewControllerAnimated(true) { () -> Void in
+            
+            let image =  info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+             self.headerImageView!.image = image
+        }
         
     }
     
@@ -79,7 +118,16 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate {
     {
         print(self.bucket)
         
-        self.bucket?.name = headerTF?.text
+        let imagedata = UIImagePNGRepresentation((headerImageView?.image)!);
+        
+        if((self.bucket.headerFileName?.characters.count) <= 0)
+        {
+            self.bucket.headerFileName =  NSObject.randomID()
+        }
+        
+        imagedata?.writeToFile(self.bucket.headerPath!, atomically: true)
+        
+        self.bucket?.title = headerTF?.text
         self.bucket?.savetoLocal()
         
         
@@ -136,6 +184,12 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate {
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        
+        
+    }
 
     
     // MARK: - Navigation
@@ -145,9 +199,23 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let destinationVC:LKCandyEditViewController = segue.destinationViewController as! LKCandyEditViewController;
+        if(segue.identifier=="editpush")
+        {
+            let indexPath:NSIndexPath = self.bktableview.indexPathForCell(sender as! UITableViewCell)! as NSIndexPath
+            
+            let candy:LKCandy = self.bucket.sourceCandies[indexPath.row] as! LKCandy
+            
+            let destinationVC:LKCandyEditViewController = segue.destinationViewController as! LKCandyEditViewController;
+            destinationVC.candy = candy;
+            destinationVC.delegate = self;
+        }
+        else
+        {
+            let destinationVC:LKCandyEditViewController = segue.destinationViewController as! LKCandyEditViewController;
+            
+            destinationVC.delegate = self;
+        }
         
-        destinationVC.delegate = self;
     }
     
 

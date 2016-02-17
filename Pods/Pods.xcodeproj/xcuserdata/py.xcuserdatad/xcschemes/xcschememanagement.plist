@@ -14,17 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PureLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SQLCipher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>VGParallaxHeader.xcscheme</key>
+		<key>UzysAssetsPickerController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2762DF1760555EEA8E4C117778DC4124</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5CCC59A3DA32DC4436DE29C5D16C0243</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF28DAE407FBA761F9D6BD92BCE8F1B8</key>
+		<key>7AD08D22D6BB4981CA91627694832802</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D638B9D6EB1F12C419CB5BCB69120921</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E92DDD7D812D392246E5A161EACEE83E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EC2133B6B776E444E53C80EAE7145159</key>
 		<dict>
 			<key>primary</key>
 			<true/>

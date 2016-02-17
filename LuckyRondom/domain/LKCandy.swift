@@ -13,7 +13,18 @@ public class LKCandy: NSObject {
     var bucketID:String?
     var ID:String?
     var name:String?
-    var imagePath:String?
+    
+    var imageName:String?
+    
+    var imagePath:String?{
+        get{
+            if(imageName?.characters.count<=0)
+            {
+                return ""
+            }
+            return FilePath() + "/" + imageName!;
+        }
+    }
     
     override init()
     {
@@ -21,7 +32,7 @@ public class LKCandy: NSObject {
         
         self.ID = NSObject.randomID();
         self.name = ""
-        self.imagePath = ""
+        self.imageName = ""
     }
     
 }

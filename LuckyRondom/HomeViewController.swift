@@ -32,7 +32,7 @@ class HomeViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-       self.refreshView()
+        self.refreshView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +59,11 @@ class HomeViewController: UITableViewController {
         // Configure the cell...
         let bucket:LkBucket = bucketsArr![indexPath.row]
         
-        cell.textLabel?.text = bucket.name
+        let image = UIImage.init(contentsOfFile: bucket.headerPath!)
+        
+        cell.imageView?.image = image;
+        
+        cell.textLabel?.text = bucket.title
         
         return cell
     }

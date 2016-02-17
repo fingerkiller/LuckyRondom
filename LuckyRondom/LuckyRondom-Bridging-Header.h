@@ -10,5 +10,5 @@
 #define LuckyRondom_Bridging_Header_h
 
 #import <FMDB.h>
-#import <UIScrollView+VGParallaxHeader.h>
+#import "UzysAssetsPickerController.h"
 #endif /* LuckyRondom_Bridging_Header_h */

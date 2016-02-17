@@ -18,18 +18,18 @@ import UIKit
 
 
 
-class LKCandyEditViewController: UITableViewController {
+class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
 
     weak  var delegate: CandyEditDelegate?
     
-    private var _candy:LKCandy?
+    
     lazy private var imageView:UIImageView = UIImageView()
     lazy private var titleTF:UITextField=UITextField()
     
     
 
     
-    
+    private var _candy:LKCandy?
     var candy:LKCandy!{
         get
         {
@@ -58,12 +58,55 @@ class LKCandyEditViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let tap = UITapGestureRecognizer.init(target: self, action: Selector.init("showImagePicker"))
+        self.imageView.userInteractionEnabled = true
+        self.imageView.addGestureRecognizer(tap);
     }
     
+    
+    
+    func showImagePicker()
+    {
+        
+        let imagePicker:UIImagePickerController = UIImagePickerController.init();
+        imagePicker.delegate = self;
+        self.presentViewController(imagePicker, animated: true) { () -> Void in
+            
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        
+        picker.dismissViewControllerAnimated(true) { () -> Void in
+            
+            let image =  info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            self.imageView.image = image
+        }
+        
+    }
     
     @IBAction func saveCandy()
     {
         self.candy.name = self.titleTF.text
+        
+        if (self.imageView.image != nil)
+        {
+            if(self.candy.imageName?.characters.count<=0)
+            {
+                self.candy.imageName = NSObject.randomID();
+            }
+            
+            let imagedata = UIImagePNGRepresentation((self.imageView.image)!);
+            
+             imagedata?.writeToFile(self.candy.imagePath!, atomically: true)
+        }
+        
+        
+       
+        
         if ((self.delegate?.respondsToSelector(Selector.init("editFinshCandy"))) != nil)
         {
             self.delegate?.editFinshCandy(self.candy)
@@ -107,6 +150,13 @@ class LKCandyEditViewController: UITableViewController {
             self.imageView.frame = CGRectMake(0, 0, 150, 150)
             self.imageView.center = CGPointMake(self.view.frame.size.width/2.0, 150/2.0)
             self.imageView.backgroundColor = UIColor.redColor()
+            
+            if(self.candy.imageName?.characters.count>0)
+            {
+                let image = UIImage.init(contentsOfFile: (self.candy.imagePath)!)
+                self.imageView.image = image
+            }
+            
             cell.contentView.addSubview(self.imageView)
             
         }
@@ -114,6 +164,7 @@ class LKCandyEditViewController: UITableViewController {
         {
             self.titleTF.frame = CGRectMake(15, 15, self.view.frame.size.width-30, 30)
             self.titleTF.placeholder = "名称"
+            self.titleTF.text = self.candy.name
             cell.contentView.addSubview(self.titleTF)
         }
         return cell

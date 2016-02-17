@@ -55,7 +55,7 @@ class LKBucketDao: NSObject {
         let userid:String = LKAccount.currentAccount.ID
         dbq.lkDbBaseq?.inDatabase({ (dbp:FMDatabase!) -> Void in
             
-            _=try?dbp.executeUpdate("insert into  Bucket (BucketID,MyAccountID,BucketName,BucketHeaderPath,BucketResultNum) values (?,?,?,?,?)", values: [bucket.ID!,userid,bucket.name!,bucket.headerPath!,bucket.resultNum!])
+            _=try?dbp.executeUpdate("insert into  Bucket (BucketID,MyAccountID,BucketName,BucketHeaderPath,BucketResultNum) values (?,?,?,?,?)", values: [bucket.ID!,userid,bucket.title!,bucket.headerFileName!,bucket.resultNum!])
             
         })
     }
@@ -77,7 +77,7 @@ class LKBucketDao: NSObject {
         
         dbq.lkDbBaseq?.inDatabase({ (dbp:FMDatabase!) -> Void in
             
-            _=try?dbp.executeUpdate("UPDATE Bucket SET BucketName = ?,BucketHeaderPath=?,BucketResultNum=? where BucketID = ?", values: [bucket.name!,bucket.headerPath!,bucket.resultNum!,bucket.ID!]);
+            _=try?dbp.executeUpdate("UPDATE Bucket SET BucketName = ?,BucketHeaderPath=?,BucketResultNum=? where BucketID = ?", values: [bucket.title!,bucket.headerFileName!,bucket.resultNum!,bucket.ID!]);
             
         })
     }
@@ -99,9 +99,9 @@ class LKBucketDao: NSObject {
             {
                 let backet:LkBucket = LkBucket()
                 
-                backet.name = resset.stringForColumn("BucketName")
+                backet.title = resset.stringForColumn("BucketName")
                 backet.ID = resset.stringForColumn("BucketID")
-                backet.headerPath = resset.stringForColumn("BucketHeaderPath")
+                backet.headerFileName = resset.stringForColumn("BucketHeaderPath")
                 backet.resultNum = Int(resset.intForColumn("BucketResultNum"))
                 
                 resultarr.append(backet)

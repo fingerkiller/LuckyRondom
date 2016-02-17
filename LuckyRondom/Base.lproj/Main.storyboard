@@ -68,6 +68,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ukk-oU-sAu" kind="show" identifier="editpush" id="yvE-Zf-Sv2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -204,5 +207,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="d1V-4Z-xeO"/>
+        <segue reference="yvE-Zf-Sv2"/>
     </inferredMetricsTieBreakers>
 </document>

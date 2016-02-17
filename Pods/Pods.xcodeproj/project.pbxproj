@@ -7,51 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01768338B004BD14535D0D0541D1C29A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD09E70086767FF09EFC830D70E7C3E /* Foundation.framework */; };
-		03508310A9EC920D73C66587DC8C0E6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD09E70086767FF09EFC830D70E7C3E /* Foundation.framework */; };
-		074BD138AD4878BF193CBD034DE6E1DD /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0556BA998E022AADA3677A9B21637 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		19B7AEBCB8B4A93609DA9A5ECCB8AD96 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D969163B9B67B1A86FAD3F215228DC74 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21ACFEDAD2B6923C9E06796290811CA5 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 634F6317D9CF8D9F298F5C86FEBA897D /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_HAS_CODEC -DSQLITE_TEMP_STORE=2 -DSQLITE_THREADSAFE -DSQLCIPHER_CRYPTO_CC -fno-objc-arc"; }; };
-		24440A5FAED1523243200BE76689756D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02D6FBABAB1E69BC8A2A5F34628F36 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		26FA242B1647CD41F4FF3026DCB7D09D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5D3994E6A483335417F47A9B015ADF /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		296F1720FD316125676BE55CE5808A59 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE9852F3CE9E130B5285B8003EEE87C /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E039AFB5D3D875BA666553A4C93D045 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A30A4979F93E15842F59B2B28A3EDC2 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36D301C0F7F03551F5A7C622AA9C138A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D801EC331D917BEA7CE778418CD79E7 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		386504561631351BFAA7CD0151A2DF40 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F68098B2BB6BF95B3A1FDEB106047D1B /* FMDB-dummy.m */; };
-		3A98CC6C567EDC8EBEC29D6424B6414C /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB47FA2D7C9372FB401C94B0839FE20 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F3839710E935861D8E8513AE5868491 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
-		4ADA6E08798E5F8C120EEB3FB4070C2F /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA798641F55A9116D6B93641483057DF /* PureLayout-dummy.m */; };
-		508111F29FC13BE1373E3D48879E2A53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD09E70086767FF09EFC830D70E7C3E /* Foundation.framework */; };
-		5DD7A19DDB17B44433E38BC6FAAA7F5F /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C84783797BDC37F20CAAA5CEA53293 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6577D0816D5D7BE67E05AB17DA18C1F3 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E40342357D4B127C3D970BC6B6143F5B /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CB084DB8E17C73BC6E535888D219067 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2648D67C2159257A89A35FB656D372BE /* NSArray+PureLayout.m */; };
-		7E98D6F10ABBE8591FDE55DD26CDE9DB /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6475A4870027A55F57664122DCECE48C /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83ED68C949C7D340E56A9EE2BCC90E77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD09E70086767FF09EFC830D70E7C3E /* Foundation.framework */; };
-		86CBBCC24E923C11473AD989EE5D763E /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF26F3B2C3B6EC4FAF30DC81144C6AC /* ALView+PureLayout.m */; };
-		89712B4FC273D641F5B11F1699B77763 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2624B536910FE834E09115C1DAA02945 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9284DEB5A5E4D5A24D901CD125100F23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD09E70086767FF09EFC830D70E7C3E /* Foundation.framework */; };
-		940EC532585EAA2E93505CA68CAED6C0 /* UIScrollView+VGParallaxHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A534C5138F6DDB05077833DE6213905A /* UIScrollView+VGParallaxHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		964E75A3E6F24D8EF69440F74B2D8CA9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE078B5023691BDBCCE7B47D1556149 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9C6D8F832F5358D8B622850D19BEAE8A /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DEBE9E3DB4A1ADD79CF495913B6E36 /* NSLayoutConstraint+PureLayout.m */; };
-		A330AA9F239B9BB08F2BDEE5CD257C2B /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 496F291621DE28519239D89C86C1653E /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A461E282FDEF61F3E2337A2A356DB555 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A739025E14C865B5F97734AFFDEA067 /* sqlite3.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFE5B566B17270D44DD0F4039D8F5C6C /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B1C4B978C2809EFD5241EEA57202DA6 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D275F89E3041AF3B2888C864DFA59404 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 55BC87B7F183B0687AFEC4E0819B3148 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3C1605DE266C66B7DC987C8AE9C1020 /* UIScrollView+VGParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2C426A4379C2C4B9B6CA6725B79BF5 /* UIScrollView+VGParallaxHeader.m */; };
-		EB50166B5514590197DDF7116A521E23 /* VGParallaxHeader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E1DE661C9FB4456AA308D8CD441B09 /* VGParallaxHeader-dummy.m */; };
-		EF1C5B1CBE5A666B49A0D766FCF85153 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D15A8D6F9B0E6BE8F955A0704F6591E /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F91593996306EE44EDDE7F8CB8AA069D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6152C0E4200F56D1004FCEF432C704C /* QuartzCore.framework */; };
-		FA6758784D1BBCD8B52DAC8C1979BA91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04EA64D7B766C9C9CC12C0702911F4E /* Security.framework */; };
-		FDFD7BE46E8A99BD7B3B344FB1D2114B /* SQLCipher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C807DD55D9C4D15EBB36B8E203165C41 /* SQLCipher-dummy.m */; };
+		03508310A9EC920D73C66587DC8C0E6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99605D41F6A147F922E3D44D0440486F /* Foundation.framework */; };
+		05C73569129D97FA415E75353DFD9948 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2B44B24D90854BEE89FD242ECF626D /* CoreGraphics.framework */; };
+		074BD138AD4878BF193CBD034DE6E1DD /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACBE75F7823CF120D6F615939E06F /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0954D7C2E36F29FFEED25616B4741720 /* UzysWrapperPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B8B2156EB7A78A452B994C6114FC /* UzysWrapperPickerController.m */; };
+		0F8046EBB9C299965790972E58C2E675 /* UzysAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BC839C067D0A91F5647805BD278B74 /* UzysAssetsPickerController.m */; };
+		183ACCB7C91991118A58EE479DB24139 /* UzysAssetsPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = B8250FEE7CF887C4EA2103DA6F82F3DD /* UzysAssetsPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D3D34575FB393F8DB632D050BADD42A /* UzysAssetsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBC5AA177A4395A43C03834EFFD0276 /* UzysAssetsViewCell.m */; };
+		21ACFEDAD2B6923C9E06796290811CA5 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E94F1A617918583E8691265D222668B /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_HAS_CODEC -DSQLITE_TEMP_STORE=2 -DSQLITE_THREADSAFE -DSQLCIPHER_CRYPTO_CC -fno-objc-arc"; }; };
+		24440A5FAED1523243200BE76689756D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2349749A27BB1D0E681EC3D9CAF502 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		26FA242B1647CD41F4FF3026DCB7D09D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E2AD844DED0965F2A33DAEDB533998 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		296F1720FD316125676BE55CE5808A59 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 524EB5642BEF9D60199C6F3C95377998 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F350834F86A2F47050CB2D2C03F57FF /* UzysAppearanceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B81D50FC62DCAC538248C7E99E0E0 /* UzysAppearanceConfig.m */; };
+		36D301C0F7F03551F5A7C622AA9C138A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 804E914B08FB425F083D104704E7FCC2 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		386504561631351BFAA7CD0151A2DF40 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0104A9D3E4FBC9902A91D659772E4 /* FMDB-dummy.m */; };
+		3A98CC6C567EDC8EBEC29D6424B6414C /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBF9AD7D0EB3946D10E20FECFFBAC24 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C236B6C36749453FCB5E729799BBCD6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47DCBC3B4E2A6A1E847E4E4BB123071 /* MobileCoreServices.framework */; };
+		45238B5BFEBA29A171DB9958114802ED /* UzysWrapperPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = B71787E24BC4FECF3467296A50FB2589 /* UzysWrapperPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FB84626FF27B3B34F01E96089E67143 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE440705B533DB2A3944CC2A296277 /* AssetsLibrary.framework */; };
+		508111F29FC13BE1373E3D48879E2A53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99605D41F6A147F922E3D44D0440486F /* Foundation.framework */; };
+		89712B4FC273D641F5B11F1699B77763 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D1232C93B64142CC219D50E3FABB26ED /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A8E52B8161410B5C2FEECE5BD6CDED7 /* UzysGroupPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 85BD34EEF81F87B2A98C3146B5AF5D32 /* UzysGroupPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D3E56D9836B941ADD7B7033F9B2B12F /* UzysAssetsPickerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 986080EDD54366A8ACF86C0766B1A606 /* UzysAssetsPickerController-dummy.m */; };
+		8D6E86C1DE89DB8E3B4FA1C9BCA0105E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99605D41F6A147F922E3D44D0440486F /* Foundation.framework */; };
+		964E75A3E6F24D8EF69440F74B2D8CA9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 675B2581445334C0F38CBB009DACC315 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A00A575DF081A4D5841922500AD773B3 /* UzysAppearanceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C613478835E6C7C91EE569FBD26CF12 /* UzysAppearanceConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A330AA9F239B9BB08F2BDEE5CD257C2B /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = F8738495CB86EE108A55B60FC53ABB97 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A461E282FDEF61F3E2337A2A356DB555 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 683C4D7F8EC4E687702DAC2CC4E5DA16 /* sqlite3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A939ECD8F0911CF2FAA09DA26D540089 /* UIImage+UzysExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4780C288CFBFD931B14C9219B6D0E3 /* UIImage+UzysExtension.m */; };
+		A99F79672A1E55E30D6A6108F57E4F66 /* UzysGroupViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1D3DEA332B3DF1DF10DE3E42581D4F /* UzysGroupViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0C57147D8411B8B2D3E2647F53BEBF7 /* UzysAssetsPickerController_Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 34C586F6A3A4D3D2ED4F62CAE0C6C51A /* UzysAssetsPickerController_Configuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFE5B566B17270D44DD0F4039D8F5C6C /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9379EC62162A0E7634E9AB1C3D3E138D /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A9152F5CAC3EAEC88F9F799BAF683F /* UzysGroupPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A76E65EFEB5719A2F3280AD542BCA985 /* UzysGroupPickerView.m */; };
+		C74428926D6714B538C82969954932DB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A845DF40FD9D86339CA074348D98A9 /* AVFoundation.framework */; };
+		C84D1CAF9249C8B58A111E8FCA5AA3F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99605D41F6A147F922E3D44D0440486F /* Foundation.framework */; };
+		DDA0EE0B54CF7D8CA293609992B1173B /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		E08B7BACC4DFF786160587E9A62D4151 /* UIImage+UzysExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A18795F9E22F76DD028EEA8190CC03 /* UIImage+UzysExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8034D3D9D3C22F71B3424A15F3677BB /* UzysGroupViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD52BAAC7D721D75A1D3A3C950C9970 /* UzysGroupViewCell.m */; };
+		EF1C5B1CBE5A666B49A0D766FCF85153 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF168F35FD7F24CC5103AB48C8AE2BE /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F67D8BBFEB467D8E5E564A51CB85EF37 /* UzysAssetsViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F35982033EFB1B06EBE2A2BFD2EAAFED /* UzysAssetsViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F79B62E154CE975DD985BEE6C7498871 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F835D8AB9EEA38CD084FCF38C94BDB26 /* QuartzCore.framework */; };
+		FA6758784D1BBCD8B52DAC8C1979BA91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF63D2086C506F8D3AF4DFE713770EC9 /* Security.framework */; };
+		FDFD7BE46E8A99BD7B3B344FB1D2114B /* SQLCipher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 266A38ED3153854A9BE4FCF162A41209 /* SQLCipher-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3EA758A9A536026D1279BBC932FDA702 /* PBXContainerItemProxy */ = {
+		229BDEF131BCCA99E60851353556E298 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E92DDD7D812D392246E5A161EACEE83E;
-			remoteInfo = VGParallaxHeader;
+			remoteGlobalIDString = 5CCC59A3DA32DC4436DE29C5D16C0243;
+			remoteInfo = FMDB;
+		};
+		3B50ECB4C08B7BD8DDE7CA1019625F5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2762DF1760555EEA8E4C117778DC4124;
+			remoteInfo = UzysAssetsPickerController;
+		};
+		6F9A424E9564053110E876A42C3798BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D638B9D6EB1F12C419CB5BCB69120921;
+			remoteInfo = SQLCipher;
 		};
 		765A63BC627195F6D886C1863BF82D03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -60,89 +80,67 @@
 			remoteGlobalIDString = D638B9D6EB1F12C419CB5BCB69120921;
 			remoteInfo = SQLCipher;
 		};
-		7C281E9CD0E2FF93D9E58428BC1C4C6B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC2133B6B776E444E53C80EAE7145159;
-			remoteInfo = PureLayout;
-		};
-		9D0F385A331E2A1925FA2F46A1386C5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D638B9D6EB1F12C419CB5BCB69120921;
-			remoteInfo = SQLCipher;
-		};
-		C51606FCD49C6FB6CF1AF635516F9079 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC2133B6B776E444E53C80EAE7145159;
-			remoteInfo = PureLayout;
-		};
-		CE4C01628BC6BBCE7D6510DBC878B5DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5CCC59A3DA32DC4436DE29C5D16C0243;
-			remoteInfo = FMDB;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03D359B80E06320B8EE9DEFFCA46B983 /* libPureLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPureLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B1C4B978C2809EFD5241EEA57202DA6 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
-		0C95FD39D6D6033D1CAF44187F59F593 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D15A8D6F9B0E6BE8F955A0704F6591E /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
-		0F1026E04A3B9D4F131467EEA541AF4F /* VGParallaxHeader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VGParallaxHeader.xcconfig; sourceTree = "<group>"; };
+		04444F9AFBD5AD3054A129535139D407 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B7B81D50FC62DCAC538248C7E99E0E0 /* UzysAppearanceConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysAppearanceConfig.m; path = UzysAssetsPickerController/Library/UzysAppearanceConfig.m; sourceTree = "<group>"; };
 		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		2624B536910FE834E09115C1DAA02945 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		2648D67C2159257A89A35FB656D372BE /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		1BDE440705B533DB2A3944CC2A296277 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		1BF168F35FD7F24CC5103AB48C8AE2BE /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		1F858ACFD69E3E3EDA121C451B88BFD8 /* UzysAssetsPickerController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = UzysAssetsPickerController.xib; path = UzysAssetsPickerController/Library/UzysAssetsPickerController.xib; sourceTree = "<group>"; };
+		1FB6B8B2156EB7A78A452B994C6114FC /* UzysWrapperPickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysWrapperPickerController.m; path = UzysAssetsPickerController/Library/UzysWrapperPickerController.m; sourceTree = "<group>"; };
+		266A38ED3153854A9BE4FCF162A41209 /* SQLCipher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLCipher-dummy.m"; sourceTree = "<group>"; };
 		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		2A30A4979F93E15842F59B2B28A3EDC2 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
-		2BE078B5023691BDBCCE7B47D1556149 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		28A845DF40FD9D86339CA074348D98A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		34C586F6A3A4D3D2ED4F62CAE0C6C51A /* UzysAssetsPickerController_Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysAssetsPickerController_Configuration.h; path = UzysAssetsPickerController/Library/UzysAssetsPickerController_Configuration.h; sourceTree = "<group>"; };
+		37BC839C067D0A91F5647805BD278B74 /* UzysAssetsPickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysAssetsPickerController.m; path = UzysAssetsPickerController/Library/UzysAssetsPickerController.m; sourceTree = "<group>"; };
 		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		496F291621DE28519239D89C86C1653E /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
-		4D801EC331D917BEA7CE778418CD79E7 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		3C613478835E6C7C91EE569FBD26CF12 /* UzysAppearanceConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysAppearanceConfig.h; path = UzysAssetsPickerController/Library/UzysAppearanceConfig.h; sourceTree = "<group>"; };
+		3DBC5AA177A4395A43C03834EFFD0276 /* UzysAssetsViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysAssetsViewCell.m; path = UzysAssetsPickerController/Library/UzysAssetsViewCell.m; sourceTree = "<group>"; };
+		3DD52BAAC7D721D75A1D3A3C950C9970 /* UzysGroupViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysGroupViewCell.m; path = UzysAssetsPickerController/Library/UzysGroupViewCell.m; sourceTree = "<group>"; };
+		3F00B49F96BE0CD4434A6E6324B1B6AC /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
 		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		55BC87B7F183B0687AFEC4E0819B3148 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
-		599DDAD8AFE5905B465D16A20A2A7EED /* libSQLCipher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSQLCipher.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		634F6317D9CF8D9F298F5C86FEBA897D /* sqlite3.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
-		6475A4870027A55F57664122DCECE48C /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
-		678CC9E4FA0326FE94C97F17359C53E1 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		4EBA2D4883AE59BD0F8A396C8FDC31FB /* UzysAssetsPickerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UzysAssetsPickerController-prefix.pch"; sourceTree = "<group>"; };
+		4FDACBE75F7823CF120D6F615939E06F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		524EB5642BEF9D60199C6F3C95377998 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		675B2581445334C0F38CBB009DACC315 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		683C4D7F8EC4E687702DAC2CC4E5DA16 /* sqlite3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		75E1DE661C9FB4456AA308D8CD441B09 /* VGParallaxHeader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VGParallaxHeader-dummy.m"; sourceTree = "<group>"; };
-		7896DCBADDCF37624A1BCC26324B50C5 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
-		78DEBE9E3DB4A1ADD79CF495913B6E36 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
-		7CE0556BA998E022AADA3677A9B21637 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		975F002101CEC20A618654F681F1780A /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		7ED3480ACE8A2C2C00BAB32C817414D8 /* UzysAssetPickerController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UzysAssetPickerController.bundle; path = UzysAssetsPickerController/Library/UzysAssetPickerController.bundle; sourceTree = "<group>"; };
+		804E914B08FB425F083D104704E7FCC2 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		85BD34EEF81F87B2A98C3146B5AF5D32 /* UzysGroupPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysGroupPickerView.h; path = UzysAssetsPickerController/Library/UzysGroupPickerView.h; sourceTree = "<group>"; };
+		85E2AD844DED0965F2A33DAEDB533998 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		8CB69AB7A4D6574DD680557A5FF6BD1D /* libUzysAssetsPickerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUzysAssetsPickerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2349749A27BB1D0E681EC3D9CAF502 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		9379EC62162A0E7634E9AB1C3D3E138D /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		986080EDD54366A8ACF86C0766B1A606 /* UzysAssetsPickerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UzysAssetsPickerController-dummy.m"; sourceTree = "<group>"; };
 		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		9A739025E14C865B5F97734AFFDEA067 /* sqlite3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
-		A04EA64D7B766C9C9CC12C0702911F4E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		99605D41F6A147F922E3D44D0440486F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9E94F1A617918583E8691265D222668B /* sqlite3.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		A0A0104A9D3E4FBC9902A91D659772E4 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
 		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		A534C5138F6DDB05077833DE6213905A /* UIScrollView+VGParallaxHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+VGParallaxHeader.h"; path = "VGParallaxHeader/UIScrollView+VGParallaxHeader.h"; sourceTree = "<group>"; };
-		AB2C426A4379C2C4B9B6CA6725B79BF5 /* UIScrollView+VGParallaxHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+VGParallaxHeader.m"; path = "VGParallaxHeader/UIScrollView+VGParallaxHeader.m"; sourceTree = "<group>"; };
-		AE02D6FBABAB1E69BC8A2A5F34628F36 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
-		B5C84783797BDC37F20CAAA5CEA53293 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		A3CED7053EA7E9C45F9BD6FE0A9CAA41 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		A76E65EFEB5719A2F3280AD542BCA985 /* UzysGroupPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UzysGroupPickerView.m; path = UzysAssetsPickerController/Library/UzysGroupPickerView.m; sourceTree = "<group>"; };
+		A7A18795F9E22F76DD028EEA8190CC03 /* UIImage+UzysExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+UzysExtension.h"; path = "UzysAssetsPickerController/Library/UIImage+UzysExtension.h"; sourceTree = "<group>"; };
+		AF2B44B24D90854BEE89FD242ECF626D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B71787E24BC4FECF3467296A50FB2589 /* UzysWrapperPickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysWrapperPickerController.h; path = UzysAssetsPickerController/Library/UzysWrapperPickerController.h; sourceTree = "<group>"; };
+		B8250FEE7CF887C4EA2103DA6F82F3DD /* UzysAssetsPickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysAssetsPickerController.h; path = UzysAssetsPickerController/Library/UzysAssetsPickerController.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BAF26F3B2C3B6EC4FAF30DC81144C6AC /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
-		BBB47FA2D7C9372FB401C94B0839FE20 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		BBE3FED4707FF3E09FB862E8FDEC4F86 /* SQLCipher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLCipher-prefix.pch"; sourceTree = "<group>"; };
-		C1927318788CE28CB068BE2BEF899AAE /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
-		C807DD55D9C4D15EBB36B8E203165C41 /* SQLCipher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLCipher-dummy.m"; sourceTree = "<group>"; };
-		C85E79CF5D120959FF0261FFD527814A /* libVGParallaxHeader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVGParallaxHeader.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6152C0E4200F56D1004FCEF432C704C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		D969163B9B67B1A86FAD3F215228DC74 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
-		DA798641F55A9116D6B93641483057DF /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
-		DBE9852F3CE9E130B5285B8003EEE87C /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
-		E1E9C7E69E7AF48D9758EDE5B11B7A81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E40342357D4B127C3D970BC6B6143F5B /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
-		F0FDCA6DF46764A9ADC30B54E89E8BCB /* VGParallaxHeader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VGParallaxHeader-prefix.pch"; sourceTree = "<group>"; };
-		F68098B2BB6BF95B3A1FDEB106047D1B /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
-		F8153CF338BBC4A809A105C0F23E3B34 /* SQLCipher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLCipher.xcconfig; sourceTree = "<group>"; };
-		FAD09E70086767FF09EFC830D70E7C3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		FB5D3994E6A483335417F47A9B015ADF /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		BB067C9F7935E7D7D9C8A05A6BB84D6A /* SQLCipher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLCipher.xcconfig; sourceTree = "<group>"; };
+		C93C1A480EA562E7B49D8B6004CBBAE1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C961223B4E223A231B77571A52B3481C /* UzysAssetsPickerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UzysAssetsPickerController.xcconfig; sourceTree = "<group>"; };
+		D1232C93B64142CC219D50E3FABB26ED /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		D35241407A359520C12E49FFB452A68B /* libSQLCipher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSQLCipher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B50F0D420E128F051A2B706C7C30DB /* SQLCipher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLCipher-prefix.pch"; sourceTree = "<group>"; };
+		DD1D3DEA332B3DF1DF10DE3E42581D4F /* UzysGroupViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysGroupViewCell.h; path = UzysAssetsPickerController/Library/UzysGroupViewCell.h; sourceTree = "<group>"; };
+		E47DCBC3B4E2A6A1E847E4E4BB123071 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		EDBF9AD7D0EB3946D10E20FECFFBAC24 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		F35982033EFB1B06EBE2A2BFD2EAAFED /* UzysAssetsViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UzysAssetsViewCell.h; path = UzysAssetsPickerController/Library/UzysAssetsViewCell.h; sourceTree = "<group>"; };
+		F835D8AB9EEA38CD084FCF38C94BDB26 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		F8738495CB86EE108A55B60FC53ABB97 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		FF4780C288CFBFD931B14C9219B6D0E3 /* UIImage+UzysExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+UzysExtension.m"; path = "UzysAssetsPickerController/Library/UIImage+UzysExtension.m"; sourceTree = "<group>"; };
+		FF63D2086C506F8D3AF4DFE713770EC9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,28 +152,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		622E1E4AE04CD74750048399AFF4BBD5 /* Frameworks */ = {
+		1E7781CEE8099BA0409AD2E5FC224947 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01768338B004BD14535D0D0541D1C29A /* Foundation.framework in Frameworks */,
+				4FB84626FF27B3B34F01E96089E67143 /* AssetsLibrary.framework in Frameworks */,
+				C74428926D6714B538C82969954932DB /* AVFoundation.framework in Frameworks */,
+				05C73569129D97FA415E75353DFD9948 /* CoreGraphics.framework in Frameworks */,
+				8D6E86C1DE89DB8E3B4FA1C9BCA0105E /* Foundation.framework in Frameworks */,
+				3C236B6C36749453FCB5E729799BBCD6 /* MobileCoreServices.framework in Frameworks */,
+				F79B62E154CE975DD985BEE6C7498871 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E94A121630299C8CFC9378A9E70A9F8 /* Frameworks */ = {
+		5CEB4DCF34A8B5FEAF0953DC5FA06B3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9284DEB5A5E4D5A24D901CD125100F23 /* Foundation.framework in Frameworks */,
-				F91593996306EE44EDDE7F8CB8AA069D /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8FD7CCC122F54B6F1E2F5D49ABA3EC05 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83ED68C949C7D340E56A9EE2BCC90E77 /* Foundation.framework in Frameworks */,
+				C84D1CAF9249C8B58A111E8FCA5AA3F0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,161 +193,101 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		086399E27F58C9B2D5941E0E6F72DB30 /* FMDB */ = {
+		05E2A721FAC7BDFC97D7C49FCF146C09 /* SQLCipher */ = {
 			isa = PBXGroup;
 			children = (
-				34F7F9695FDEFD11B7717D0A68BEFD29 /* SQLCipher */,
-				EA89D53EBF546D4EE448308C5E02A2A5 /* Support Files */,
+				93481E645D1DDB2EDE453FA9E5D8CCAA /* common */,
+				B3266FFD1573A6E2891D2D84BD423095 /* Support Files */,
 			);
-			path = FMDB;
+			path = SQLCipher;
 			sourceTree = "<group>";
 		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+		0A370C5B5DD49E537CCAF430BA4778AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2ACD9CF3B0E3C89F1DE025219EF67B7 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		17B4639BB0DF9FF962053A4555EB9043 /* PureLayout */ = {
-			isa = PBXGroup;
-			children = (
-				2A30A4979F93E15842F59B2B28A3EDC2 /* ALView+PureLayout.h */,
-				BAF26F3B2C3B6EC4FAF30DC81144C6AC /* ALView+PureLayout.m */,
-				B5C84783797BDC37F20CAAA5CEA53293 /* NSArray+PureLayout.h */,
-				2648D67C2159257A89A35FB656D372BE /* NSArray+PureLayout.m */,
-				6475A4870027A55F57664122DCECE48C /* NSLayoutConstraint+PureLayout.h */,
-				78DEBE9E3DB4A1ADD79CF495913B6E36 /* NSLayoutConstraint+PureLayout.m */,
-				E40342357D4B127C3D970BC6B6143F5B /* PureLayout.h */,
-				55BC87B7F183B0687AFEC4E0819B3148 /* PureLayout+Internal.h */,
-				D969163B9B67B1A86FAD3F215228DC74 /* PureLayoutDefines.h */,
-				4899F1E73BC4351A9C6B6F60AD017A8C /* Support Files */,
-			);
-			path = PureLayout;
-			sourceTree = "<group>";
-		};
-		206BD953236D14A5529D8451E9CC8C0E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				086399E27F58C9B2D5941E0E6F72DB30 /* FMDB */,
-				17B4639BB0DF9FF962053A4555EB9043 /* PureLayout */,
-				A9C1C4151B4DD1AD7DA0233DC68628EC /* SQLCipher */,
-				2CE852C9AE4F7AC7FC011A4AC04FB216 /* VGParallaxHeader */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2CE852C9AE4F7AC7FC011A4AC04FB216 /* VGParallaxHeader */ = {
-			isa = PBXGroup;
-			children = (
-				A534C5138F6DDB05077833DE6213905A /* UIScrollView+VGParallaxHeader.h */,
-				AB2C426A4379C2C4B9B6CA6725B79BF5 /* UIScrollView+VGParallaxHeader.m */,
-				798EC75CECA6710AB12D827BA13BE59F /* Support Files */,
-			);
-			path = VGParallaxHeader;
-			sourceTree = "<group>";
-		};
-		33077D528E9CC09EAB9A6A0C00ACC578 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8153CF338BBC4A809A105C0F23E3B34 /* SQLCipher.xcconfig */,
-				C807DD55D9C4D15EBB36B8E203165C41 /* SQLCipher-dummy.m */,
-				BBE3FED4707FF3E09FB862E8FDEC4F86 /* SQLCipher-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SQLCipher";
-			sourceTree = "<group>";
-		};
-		34F7F9695FDEFD11B7717D0A68BEFD29 /* SQLCipher */ = {
-			isa = PBXGroup;
-			children = (
-				DBE9852F3CE9E130B5285B8003EEE87C /* FMDatabase.h */,
-				0D15A8D6F9B0E6BE8F955A0704F6591E /* FMDatabase.m */,
-				2624B536910FE834E09115C1DAA02945 /* FMDatabaseAdditions.h */,
-				7CE0556BA998E022AADA3677A9B21637 /* FMDatabaseAdditions.m */,
-				0B1C4B978C2809EFD5241EEA57202DA6 /* FMDatabasePool.h */,
-				AE02D6FBABAB1E69BC8A2A5F34628F36 /* FMDatabasePool.m */,
-				BBB47FA2D7C9372FB401C94B0839FE20 /* FMDatabaseQueue.h */,
-				FB5D3994E6A483335417F47A9B015ADF /* FMDatabaseQueue.m */,
-				496F291621DE28519239D89C86C1653E /* FMDB.h */,
-				4D801EC331D917BEA7CE778418CD79E7 /* FMResultSet.h */,
-				2BE078B5023691BDBCCE7B47D1556149 /* FMResultSet.m */,
-			);
-			name = SQLCipher;
-			sourceTree = "<group>";
-		};
-		4899F1E73BC4351A9C6B6F60AD017A8C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				678CC9E4FA0326FE94C97F17359C53E1 /* PureLayout.xcconfig */,
-				DA798641F55A9116D6B93641483057DF /* PureLayout-dummy.m */,
-				7896DCBADDCF37624A1BCC26324B50C5 /* PureLayout-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PureLayout";
-			sourceTree = "<group>";
-		};
-		49E7E675857D215579EDE667EF50FA2A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0C95FD39D6D6033D1CAF44187F59F593 /* libFMDB.a */,
-				E1E9C7E69E7AF48D9758EDE5B11B7A81 /* libPods.a */,
-				03D359B80E06320B8EE9DEFFCA46B983 /* libPureLayout.a */,
-				599DDAD8AFE5905B465D16A20A2A7EED /* libSQLCipher.a */,
-				C85E79CF5D120959FF0261FFD527814A /* libVGParallaxHeader.a */,
+				04444F9AFBD5AD3054A129535139D407 /* libFMDB.a */,
+				C93C1A480EA562E7B49D8B6004CBBAE1 /* libPods.a */,
+				D35241407A359520C12E49FFB452A68B /* libSQLCipher.a */,
+				8CB69AB7A4D6574DD680557A5FF6BD1D /* libUzysAssetsPickerController.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		798EC75CECA6710AB12D827BA13BE59F /* Support Files */ = {
+		17A12CA99AA2B96A713799D248A8C325 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F1026E04A3B9D4F131467EEA541AF4F /* VGParallaxHeader.xcconfig */,
-				75E1DE661C9FB4456AA308D8CD441B09 /* VGParallaxHeader-dummy.m */,
-				F0FDCA6DF46764A9ADC30B54E89E8BCB /* VGParallaxHeader-prefix.pch */,
+				C961223B4E223A231B77571A52B3481C /* UzysAssetsPickerController.xcconfig */,
+				986080EDD54366A8ACF86C0766B1A606 /* UzysAssetsPickerController-dummy.m */,
+				4EBA2D4883AE59BD0F8A396C8FDC31FB /* UzysAssetsPickerController-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/VGParallaxHeader";
+			path = "../Target Support Files/UzysAssetsPickerController";
+			sourceTree = "<group>";
+		};
+		3E4013662DC94C3B6168E77FC8EB42EE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3CED7053EA7E9C45F9BD6FE0A9CAA41 /* FMDB.xcconfig */,
+				A0A0104A9D3E4FBC9902A91D659772E4 /* FMDB-dummy.m */,
+				3F00B49F96BE0CD4434A6E6324B1B6AC /* FMDB-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				206BD953236D14A5529D8451E9CC8C0E /* Pods */,
-				49E7E675857D215579EDE667EF50FA2A /* Products */,
+				F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */,
+				D2E18BF93D94A3D59F47C5A375D949C1 /* Pods */,
+				0A370C5B5DD49E537CCAF430BA4778AE /* Products */,
 				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A9C1C4151B4DD1AD7DA0233DC68628EC /* SQLCipher */ = {
+		85201D3896364BBD2775A0CE7AEBF3E2 /* UzysAssetsPickerController */ = {
 			isa = PBXGroup;
 			children = (
-				ABBA7DE062E797E2251C8767344F95DF /* common */,
-				33077D528E9CC09EAB9A6A0C00ACC578 /* Support Files */,
+				A7A18795F9E22F76DD028EEA8190CC03 /* UIImage+UzysExtension.h */,
+				FF4780C288CFBFD931B14C9219B6D0E3 /* UIImage+UzysExtension.m */,
+				3C613478835E6C7C91EE569FBD26CF12 /* UzysAppearanceConfig.h */,
+				0B7B81D50FC62DCAC538248C7E99E0E0 /* UzysAppearanceConfig.m */,
+				B8250FEE7CF887C4EA2103DA6F82F3DD /* UzysAssetsPickerController.h */,
+				37BC839C067D0A91F5647805BD278B74 /* UzysAssetsPickerController.m */,
+				34C586F6A3A4D3D2ED4F62CAE0C6C51A /* UzysAssetsPickerController_Configuration.h */,
+				F35982033EFB1B06EBE2A2BFD2EAAFED /* UzysAssetsViewCell.h */,
+				3DBC5AA177A4395A43C03834EFFD0276 /* UzysAssetsViewCell.m */,
+				85BD34EEF81F87B2A98C3146B5AF5D32 /* UzysGroupPickerView.h */,
+				A76E65EFEB5719A2F3280AD542BCA985 /* UzysGroupPickerView.m */,
+				DD1D3DEA332B3DF1DF10DE3E42581D4F /* UzysGroupViewCell.h */,
+				3DD52BAAC7D721D75A1D3A3C950C9970 /* UzysGroupViewCell.m */,
+				B71787E24BC4FECF3467296A50FB2589 /* UzysWrapperPickerController.h */,
+				1FB6B8B2156EB7A78A452B994C6114FC /* UzysWrapperPickerController.m */,
+				CB268A9387D90909E06C49E603073484 /* Resources */,
+				17A12CA99AA2B96A713799D248A8C325 /* Support Files */,
 			);
-			path = SQLCipher;
+			path = UzysAssetsPickerController;
 			sourceTree = "<group>";
 		};
-		ABBA7DE062E797E2251C8767344F95DF /* common */ = {
+		93481E645D1DDB2EDE453FA9E5D8CCAA /* common */ = {
 			isa = PBXGroup;
 			children = (
-				634F6317D9CF8D9F298F5C86FEBA897D /* sqlite3.c */,
-				9A739025E14C865B5F97734AFFDEA067 /* sqlite3.h */,
+				9E94F1A617918583E8691265D222668B /* sqlite3.c */,
+				683C4D7F8EC4E687702DAC2CC4E5DA16 /* sqlite3.h */,
 			);
 			name = common;
 			sourceTree = "<group>";
 		};
-		B2ACD9CF3B0E3C89F1DE025219EF67B7 /* iOS */ = {
+		B3266FFD1573A6E2891D2D84BD423095 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FAD09E70086767FF09EFC830D70E7C3E /* Foundation.framework */,
-				D6152C0E4200F56D1004FCEF432C704C /* QuartzCore.framework */,
-				A04EA64D7B766C9C9CC12C0702911F4E /* Security.framework */,
+				BB067C9F7935E7D7D9C8A05A6BB84D6A /* SQLCipher.xcconfig */,
+				266A38ED3153854A9BE4FCF162A41209 /* SQLCipher-dummy.m */,
+				D4B50F0D420E128F051A2B706C7C30DB /* SQLCipher-prefix.pch */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/SQLCipher";
 			sourceTree = "<group>";
 		};
 		B3D1D13E0C6553800746CB8FD61CF946 /* Pods */ = {
@@ -371,46 +305,97 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		EA89D53EBF546D4EE448308C5E02A2A5 /* Support Files */ = {
+		CB268A9387D90909E06C49E603073484 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				975F002101CEC20A618654F681F1780A /* FMDB.xcconfig */,
-				F68098B2BB6BF95B3A1FDEB106047D1B /* FMDB-dummy.m */,
-				C1927318788CE28CB068BE2BEF899AAE /* FMDB-prefix.pch */,
+				7ED3480ACE8A2C2C00BAB32C817414D8 /* UzysAssetPickerController.bundle */,
+				1F858ACFD69E3E3EDA121C451B88BFD8 /* UzysAssetsPickerController.xib */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FMDB";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D2E18BF93D94A3D59F47C5A375D949C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1FD19DC2302C2DF9319F200086E9181 /* FMDB */,
+				05E2A721FAC7BDFC97D7C49FCF146C09 /* SQLCipher */,
+				85201D3896364BBD2775A0CE7AEBF3E2 /* UzysAssetsPickerController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA8761C8E8BD3D4C58CE00F36A03E41C /* SQLCipher */ = {
+			isa = PBXGroup;
+			children = (
+				524EB5642BEF9D60199C6F3C95377998 /* FMDatabase.h */,
+				1BF168F35FD7F24CC5103AB48C8AE2BE /* FMDatabase.m */,
+				D1232C93B64142CC219D50E3FABB26ED /* FMDatabaseAdditions.h */,
+				4FDACBE75F7823CF120D6F615939E06F /* FMDatabaseAdditions.m */,
+				9379EC62162A0E7634E9AB1C3D3E138D /* FMDatabasePool.h */,
+				8F2349749A27BB1D0E681EC3D9CAF502 /* FMDatabasePool.m */,
+				EDBF9AD7D0EB3946D10E20FECFFBAC24 /* FMDatabaseQueue.h */,
+				85E2AD844DED0965F2A33DAEDB533998 /* FMDatabaseQueue.m */,
+				F8738495CB86EE108A55B60FC53ABB97 /* FMDB.h */,
+				804E914B08FB425F083D104704E7FCC2 /* FMResultSet.h */,
+				675B2581445334C0F38CBB009DACC315 /* FMResultSet.m */,
+			);
+			name = SQLCipher;
+			sourceTree = "<group>";
+		};
+		E1FD19DC2302C2DF9319F200086E9181 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				DA8761C8E8BD3D4C58CE00F36A03E41C /* SQLCipher */,
+				3E4013662DC94C3B6168E77FC8EB42EE /* Support Files */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		EFB84C72432A7DA7BBB0C13EC1A7FB53 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1BDE440705B533DB2A3944CC2A296277 /* AssetsLibrary.framework */,
+				28A845DF40FD9D86339CA074348D98A9 /* AVFoundation.framework */,
+				AF2B44B24D90854BEE89FD242ECF626D /* CoreGraphics.framework */,
+				99605D41F6A147F922E3D44D0440486F /* Foundation.framework */,
+				E47DCBC3B4E2A6A1E847E4E4BB123071 /* MobileCoreServices.framework */,
+				F835D8AB9EEA38CD084FCF38C94BDB26 /* QuartzCore.framework */,
+				FF63D2086C506F8D3AF4DFE713770EC9 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFB84C72432A7DA7BBB0C13EC1A7FB53 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		7044D3194F27EE0A5D59BC7C97B61936 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08B7BACC4DFF786160587E9A62D4151 /* UIImage+UzysExtension.h in Headers */,
+				A00A575DF081A4D5841922500AD773B3 /* UzysAppearanceConfig.h in Headers */,
+				183ACCB7C91991118A58EE479DB24139 /* UzysAssetsPickerController.h in Headers */,
+				B0C57147D8411B8B2D3E2647F53BEBF7 /* UzysAssetsPickerController_Configuration.h in Headers */,
+				F67D8BBFEB467D8E5E564A51CB85EF37 /* UzysAssetsViewCell.h in Headers */,
+				8A8E52B8161410B5C2FEECE5BD6CDED7 /* UzysGroupPickerView.h in Headers */,
+				A99F79672A1E55E30D6A6108F57E4F66 /* UzysGroupViewCell.h in Headers */,
+				45238B5BFEBA29A171DB9958114802ED /* UzysWrapperPickerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74BC5B7F429EFF76815F488B340E735D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A461E282FDEF61F3E2337A2A356DB555 /* sqlite3.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B138E2F2B1013BB5F3657E7B6FE503C6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				940EC532585EAA2E93505CA68CAED6C0 /* UIScrollView+VGParallaxHeader.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0DB34A3D0D64CB313A7EADBD31B7D47 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E039AFB5D3D875BA666553A4C93D045 /* ALView+PureLayout.h in Headers */,
-				5DD7A19DDB17B44433E38BC6FAAA7F5F /* NSArray+PureLayout.h in Headers */,
-				7E98D6F10ABBE8591FDE55DD26CDE9DB /* NSLayoutConstraint+PureLayout.h in Headers */,
-				D275F89E3041AF3B2888C864DFA59404 /* PureLayout+Internal.h in Headers */,
-				6577D0816D5D7BE67E05AB17DA18C1F3 /* PureLayout.h in Headers */,
-				19B7AEBCB8B4A93609DA9A5ECCB8AD96 /* PureLayoutDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +415,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2762DF1760555EEA8E4C117778DC4124 /* UzysAssetsPickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 236126664D660235D1B40029C2433942 /* Build configuration list for PBXNativeTarget "UzysAssetsPickerController" */;
+			buildPhases = (
+				0976DD584186CDA5A5F24892CC8C14E9 /* Sources */,
+				1E7781CEE8099BA0409AD2E5FC224947 /* Frameworks */,
+				7044D3194F27EE0A5D59BC7C97B61936 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UzysAssetsPickerController;
+			productName = UzysAssetsPickerController;
+			productReference = 8CB69AB7A4D6574DD680557A5FF6BD1D /* libUzysAssetsPickerController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		5CCC59A3DA32DC4436DE29C5D16C0243 /* FMDB */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8ECBE44C5A4FA165C2A7C7F1911E6AED /* Build configuration list for PBXNativeTarget "FMDB" */;
@@ -445,27 +447,26 @@
 			);
 			name = FMDB;
 			productName = FMDB;
-			productReference = 0C95FD39D6D6033D1CAF44187F59F593 /* libFMDB.a */;
+			productReference = 04444F9AFBD5AD3054A129535139D407 /* libFMDB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		AF28DAE407FBA761F9D6BD92BCE8F1B8 /* Pods */ = {
+		7AD08D22D6BB4981CA91627694832802 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36A56612095B390AC66F07326CD54AB6 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 6A10C64850848377E57D30E27EB8DE79 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				70BDB558D4509363743082C041C748EF /* Sources */,
-				8FD7CCC122F54B6F1E2F5D49ABA3EC05 /* Frameworks */,
+				4ACCB632F5236EE11B96904C9970EB87 /* Sources */,
+				5CEB4DCF34A8B5FEAF0953DC5FA06B3F /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7F51072D0295EB7B97F70D20B806D9B1 /* PBXTargetDependency */,
-				D4CF60BF7EA2E8CC0D3552CD37D8A98B /* PBXTargetDependency */,
-				0A77EF7B76077D95ADD11B2004BFFFB3 /* PBXTargetDependency */,
-				684E57C419FEFD2D2452A5D8E0F4AD0F /* PBXTargetDependency */,
+				9B3F062CAB9633698003563AB5CF0AEF /* PBXTargetDependency */,
+				21BC8819FE99D8D9FC7F8794D873AEEA /* PBXTargetDependency */,
+				7795E715BD85719E619FE4F1165748FC /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = E1E9C7E69E7AF48D9758EDE5B11B7A81 /* libPods.a */;
+			productReference = C93C1A480EA562E7B49D8B6004CBBAE1 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D638B9D6EB1F12C419CB5BCB69120921 /* SQLCipher */ = {
@@ -482,42 +483,7 @@
 			);
 			name = SQLCipher;
 			productName = SQLCipher;
-			productReference = 599DDAD8AFE5905B465D16A20A2A7EED /* libSQLCipher.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E92DDD7D812D392246E5A161EACEE83E /* VGParallaxHeader */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 97FE89829A50333E3569ACEA77C9D812 /* Build configuration list for PBXNativeTarget "VGParallaxHeader" */;
-			buildPhases = (
-				557B8C3DFC08E63147B1CE0F96E21291 /* Sources */,
-				7E94A121630299C8CFC9378A9E70A9F8 /* Frameworks */,
-				B138E2F2B1013BB5F3657E7B6FE503C6 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				66423E720E381DA000E8F54B3D0C0D0A /* PBXTargetDependency */,
-			);
-			name = VGParallaxHeader;
-			productName = VGParallaxHeader;
-			productReference = C85E79CF5D120959FF0261FFD527814A /* libVGParallaxHeader.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		EC2133B6B776E444E53C80EAE7145159 /* PureLayout */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F65E146D07CAAC48311256E27356610D /* Build configuration list for PBXNativeTarget "PureLayout" */;
-			buildPhases = (
-				449F6FC6B82A2FEB9876E48E69A3CBCC /* Sources */,
-				622E1E4AE04CD74750048399AFF4BBD5 /* Frameworks */,
-				C0DB34A3D0D64CB313A7EADBD31B7D47 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PureLayout;
-			productName = PureLayout;
-			productReference = 03D359B80E06320B8EE9DEFFCA46B983 /* libPureLayout.a */;
+			productReference = D35241407A359520C12E49FFB452A68B /* libSQLCipher.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -537,45 +503,39 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 49E7E675857D215579EDE667EF50FA2A /* Products */;
+			productRefGroup = 0A370C5B5DD49E537CCAF430BA4778AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5CCC59A3DA32DC4436DE29C5D16C0243 /* FMDB */,
-				AF28DAE407FBA761F9D6BD92BCE8F1B8 /* Pods */,
-				EC2133B6B776E444E53C80EAE7145159 /* PureLayout */,
+				7AD08D22D6BB4981CA91627694832802 /* Pods */,
 				D638B9D6EB1F12C419CB5BCB69120921 /* SQLCipher */,
-				E92DDD7D812D392246E5A161EACEE83E /* VGParallaxHeader */,
+				2762DF1760555EEA8E4C117778DC4124 /* UzysAssetsPickerController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		449F6FC6B82A2FEB9876E48E69A3CBCC /* Sources */ = {
+		0976DD584186CDA5A5F24892CC8C14E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86CBBCC24E923C11473AD989EE5D763E /* ALView+PureLayout.m in Sources */,
-				7CB084DB8E17C73BC6E535888D219067 /* NSArray+PureLayout.m in Sources */,
-				9C6D8F832F5358D8B622850D19BEAE8A /* NSLayoutConstraint+PureLayout.m in Sources */,
-				4ADA6E08798E5F8C120EEB3FB4070C2F /* PureLayout-dummy.m in Sources */,
+				A939ECD8F0911CF2FAA09DA26D540089 /* UIImage+UzysExtension.m in Sources */,
+				2F350834F86A2F47050CB2D2C03F57FF /* UzysAppearanceConfig.m in Sources */,
+				8D3E56D9836B941ADD7B7033F9B2B12F /* UzysAssetsPickerController-dummy.m in Sources */,
+				0F8046EBB9C299965790972E58C2E675 /* UzysAssetsPickerController.m in Sources */,
+				1D3D34575FB393F8DB632D050BADD42A /* UzysAssetsViewCell.m in Sources */,
+				C2A9152F5CAC3EAEC88F9F799BAF683F /* UzysGroupPickerView.m in Sources */,
+				E8034D3D9D3C22F71B3424A15F3677BB /* UzysGroupViewCell.m in Sources */,
+				0954D7C2E36F29FFEED25616B4741720 /* UzysWrapperPickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		557B8C3DFC08E63147B1CE0F96E21291 /* Sources */ = {
+		4ACCB632F5236EE11B96904C9970EB87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C1605DE266C66B7DC987C8AE9C1020 /* UIScrollView+VGParallaxHeader.m in Sources */,
-				EB50166B5514590197DDF7116A521E23 /* VGParallaxHeader-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		70BDB558D4509363743082C041C748EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F3839710E935861D8E8513AE5868491 /* Pods-dummy.m in Sources */,
+				DDA0EE0B54CF7D8CA293609992B1173B /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,35 +564,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0A77EF7B76077D95ADD11B2004BFFFB3 /* PBXTargetDependency */ = {
+		21BC8819FE99D8D9FC7F8794D873AEEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SQLCipher;
 			target = D638B9D6EB1F12C419CB5BCB69120921 /* SQLCipher */;
-			targetProxy = 9D0F385A331E2A1925FA2F46A1386C5C /* PBXContainerItemProxy */;
+			targetProxy = 6F9A424E9564053110E876A42C3798BD /* PBXContainerItemProxy */;
 		};
-		66423E720E381DA000E8F54B3D0C0D0A /* PBXTargetDependency */ = {
+		7795E715BD85719E619FE4F1165748FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PureLayout;
-			target = EC2133B6B776E444E53C80EAE7145159 /* PureLayout */;
-			targetProxy = C51606FCD49C6FB6CF1AF635516F9079 /* PBXContainerItemProxy */;
+			name = UzysAssetsPickerController;
+			target = 2762DF1760555EEA8E4C117778DC4124 /* UzysAssetsPickerController */;
+			targetProxy = 3B50ECB4C08B7BD8DDE7CA1019625F5F /* PBXContainerItemProxy */;
 		};
-		684E57C419FEFD2D2452A5D8E0F4AD0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = VGParallaxHeader;
-			target = E92DDD7D812D392246E5A161EACEE83E /* VGParallaxHeader */;
-			targetProxy = 3EA758A9A536026D1279BBC932FDA702 /* PBXContainerItemProxy */;
-		};
-		7F51072D0295EB7B97F70D20B806D9B1 /* PBXTargetDependency */ = {
+		9B3F062CAB9633698003563AB5CF0AEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FMDB;
 			target = 5CCC59A3DA32DC4436DE29C5D16C0243 /* FMDB */;
-			targetProxy = CE4C01628BC6BBCE7D6510DBC878B5DF /* PBXContainerItemProxy */;
-		};
-		D4CF60BF7EA2E8CC0D3552CD37D8A98B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PureLayout;
-			target = EC2133B6B776E444E53C80EAE7145159 /* PureLayout */;
-			targetProxy = 7C281E9CD0E2FF93D9E58428BC1C4C6B /* PBXContainerItemProxy */;
+			targetProxy = 229BDEF131BCCA99E60851353556E298 /* PBXContainerItemProxy */;
 		};
 		EF73D00801A7B6CA1287BE3B29033877 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -677,7 +625,60 @@
 			};
 			name = Release;
 		};
-		0EC41E10C92D11FF34630AE016AB642A /* Release */ = {
+		251E8AB639FF32BD8665A7684ABD6F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		297A5C1A9440FA7157988605DE317563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB067C9F7935E7D7D9C8A05A6BB84D6A /* SQLCipher.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLCipher/SQLCipher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2D1EC6862028CB31420A1FEB902439A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C961223B4E223A231B77571A52B3481C /* UzysAssetsPickerController.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UzysAssetsPickerController/UzysAssetsPickerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3CA0E2267DC53DAC84A2AF423BF488AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
 			buildSettings = {
@@ -694,84 +695,12 @@
 			};
 			name = Release;
 		};
-		297A5C1A9440FA7157988605DE317563 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8153CF338BBC4A809A105C0F23E3B34 /* SQLCipher.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SQLCipher/SQLCipher-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		2FE396076B0109EDA5AD84D7A86B766F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 678CC9E4FA0326FE94C97F17359C53E1 /* PureLayout.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		506DABC839A12135E652778C07F39869 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 678CC9E4FA0326FE94C97F17359C53E1 /* PureLayout.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		51A74BB162E47CD720FE9EE6D141C378 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8153CF338BBC4A809A105C0F23E3B34 /* SQLCipher.xcconfig */;
+			baseConfigurationReference = BB067C9F7935E7D7D9C8A05A6BB84D6A /* SQLCipher.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SQLCipher/SQLCipher-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A0BBAE29B8C95E46B7105E04AA79F44B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F1026E04A3B9D4F131467EEA541AF4F /* VGParallaxHeader.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/VGParallaxHeader/VGParallaxHeader-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -786,7 +715,7 @@
 		};
 		A8A67D9F34915E95B2A79F93C02B0B25 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 975F002101CEC20A618654F681F1780A /* FMDB.xcconfig */;
+			baseConfigurationReference = A3CED7053EA7E9C45F9BD6FE0A9CAA41 /* FMDB.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
@@ -841,44 +770,9 @@
 			};
 			name = Debug;
 		};
-		BE4F9964D21768E6FD7C6FBE8A017AB3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F1026E04A3B9D4F131467EEA541AF4F /* VGParallaxHeader.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/VGParallaxHeader/VGParallaxHeader-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		C42CCC0CD3D54CA5DEE0C48327483C5B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		D822479E203CBFAAC585C35C4A46C91E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 975F002101CEC20A618654F681F1780A /* FMDB.xcconfig */;
+			baseConfigurationReference = A3CED7053EA7E9C45F9BD6FE0A9CAA41 /* FMDB.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
@@ -894,9 +788,36 @@
 			};
 			name = Release;
 		};
+		FE45D8D394E346F4CDA45D59E8894B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C961223B4E223A231B77571A52B3481C /* UzysAssetsPickerController.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UzysAssetsPickerController/UzysAssetsPickerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		236126664D660235D1B40029C2433942 /* Build configuration list for PBXNativeTarget "UzysAssetsPickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE45D8D394E346F4CDA45D59E8894B4D /* Debug */,
+				2D1EC6862028CB31420A1FEB902439A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -906,11 +827,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36A56612095B390AC66F07326CD54AB6 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		6A10C64850848377E57D30E27EB8DE79 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C42CCC0CD3D54CA5DEE0C48327483C5B /* Debug */,
-				0EC41E10C92D11FF34630AE016AB642A /* Release */,
+				251E8AB639FF32BD8665A7684ABD6F10 /* Debug */,
+				3CA0E2267DC53DAC84A2AF423BF488AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -924,29 +845,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97FE89829A50333E3569ACEA77C9D812 /* Build configuration list for PBXNativeTarget "VGParallaxHeader" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0BBAE29B8C95E46B7105E04AA79F44B /* Debug */,
-				BE4F9964D21768E6FD7C6FBE8A017AB3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		EB1C129CA127307A3EAEB0ADA08DB8DD /* Build configuration list for PBXNativeTarget "SQLCipher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51A74BB162E47CD720FE9EE6D141C378 /* Debug */,
 				297A5C1A9440FA7157988605DE317563 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F65E146D07CAAC48311256E27356610D /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				506DABC839A12135E652778C07F39869 /* Debug */,
-				2FE396076B0109EDA5AD84D7A86B766F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

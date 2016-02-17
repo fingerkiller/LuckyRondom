@@ -12,9 +12,18 @@ class LkBucket: NSObject {
 
     var ID:String?
     
-    var name:String?//名称
+    var title:String?//名称
     
-    var headerPath:String?//图片路径
+    var headerFileName:String?//图片路径
+    var headerPath:String?{
+        get{
+            if(headerFileName?.characters.count<=0)
+            {
+                return ""
+            }
+            return FilePath() + "/" + headerFileName!;
+        }
+    }
     
     var resultNum:Int?//结果数
     
@@ -26,8 +35,8 @@ class LkBucket: NSObject {
     override init() {
         super.init()
         self.ID = NSObject.randomID();
-        self.name = "";
-        self.headerPath = "";
+        self.title = "";
+        self.headerFileName = "";
         self.resultNum = 1
     }
     

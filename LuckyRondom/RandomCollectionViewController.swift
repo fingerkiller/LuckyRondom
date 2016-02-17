@@ -101,7 +101,17 @@ class RandomCollectionViewController: UICollectionViewController {
         
         cell.titleLb.text = candy.name;
         
-        cell.backgroundColor = UIColor.redColor()
+        if(candy.imageName?.characters.count>0)
+        {
+            let image = UIImage.init(contentsOfFile: (candy.imagePath)!)
+            cell.bkImage.image = image;
+        }
+        else
+        {
+            cell.backgroundColor = UIColor.orangeColor()
+        }
+        
+        
         
         return cell
     }
