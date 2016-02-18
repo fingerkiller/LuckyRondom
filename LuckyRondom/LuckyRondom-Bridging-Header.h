@@ -10,5 +10,4 @@
 #define LuckyRondom_Bridging_Header_h
 
 #import <FMDB.h>
-#import "UzysAssetsPickerController.h"
 #endif /* LuckyRondom_Bridging_Header_h */
