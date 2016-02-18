@@ -18,7 +18,7 @@ import UIKit
 
 
 
-class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ImagePickerDelegate{
 
     weak  var delegate: CandyEditDelegate?
     
@@ -28,6 +28,7 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
     
     
 
+    private var _imagePicker:LKImagePicker?
     
     private var _candy:LKCandy?
     var candy:LKCandy!{
@@ -66,27 +67,22 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
     
     
     
+    
     func showImagePicker()
     {
         
-        let imagePicker:UIImagePickerController = UIImagePickerController.init();
-        imagePicker.delegate = self;
-        self.presentViewController(imagePicker, animated: true) { () -> Void in
-            
-        }
+        _imagePicker = LKImagePicker()
+        _imagePicker!.delegate = self
+        _imagePicker!.showIn(self)
+        
+        
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        
-        picker.dismissViewControllerAnimated(true) { () -> Void in
-            
-            let image =  info[UIImagePickerControllerOriginalImage] as! UIImage
-            
-            self.imageView.image = image
-        }
-        
+    func imagePickerhasSelectImage(image: UIImage) {
+        self.imageView.image = image
     }
+    
+    
     
     @IBAction func saveCandy()
     {

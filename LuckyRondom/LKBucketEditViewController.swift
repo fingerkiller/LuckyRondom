@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,ImagePickerDelegate{
 
     @IBOutlet var bktableview:UITableView!
     
@@ -16,6 +16,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     private  var headerTF:UITextField?
     private var headerImageView:UIImageView?
     private var _bucket:LkBucket?
+    private var _imagePicker:LKImagePicker?
     
     var bucket:LkBucket!{
         get
@@ -41,7 +42,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     {
         
         self.bucket.saveCandy(acandy)
-        self.bucket.sourceCandies.addObject(acandy)
+        self.bucket.sourceCandies = LKCandyDao.getAllCandys(from: self.bucket.ID);
         self.bktableview.reloadData()
        
     }
@@ -94,24 +95,17 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     func showImagePicker()
     {
         
-        let imagePicker:UIImagePickerController = UIImagePickerController.init();
-        imagePicker.delegate = self;
-        self.presentViewController(imagePicker, animated: true) { () -> Void in
-            
-        }
+        _imagePicker = LKImagePicker()
+        _imagePicker!.delegate = self
+        _imagePicker!.showIn(self)
+        
+
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        
-        picker.dismissViewControllerAnimated(true) { () -> Void in
-            
-            let image =  info[UIImagePickerControllerOriginalImage] as! UIImage
-            
-             self.headerImageView!.image = image
-        }
-        
+    func imagePickerhasSelectImage(image: UIImage) {
+        self.headerImageView!.image = image
     }
+    
     
     
     @IBAction func saveBucket()

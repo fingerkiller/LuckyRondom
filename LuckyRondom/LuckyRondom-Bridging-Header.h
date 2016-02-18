@@ -10,4 +10,9 @@
 #define LuckyRondom_Bridging_Header_h
 
 #import <FMDB.h>
+
+
+#import "VPImageCropperViewController.h"
+
+
 #endif /* LuckyRondom_Bridging_Header_h */
