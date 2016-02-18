@@ -179,7 +179,11 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
         
         // Configure the cell...
         let candy:LKCandy = self.bucket.sourceCandies[indexPath.row] as! LKCandy
-        
+        if(candy.imageName?.characters.count>0)
+        {
+            let image = UIImage.init(contentsOfFile: (candy.imagePath)!)
+            cell.imageView!.image = image
+        }
         cell.textLabel?.text = candy.name
         
         return cell

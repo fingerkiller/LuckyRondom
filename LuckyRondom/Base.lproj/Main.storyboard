@@ -81,9 +81,7 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2bb-Sq-wFB"/>
-                                    <barButtonItem title="编辑" id="RHo-k3-VEa"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oqH-iH-B1I"/>
-                                    <barButtonItem title="添加" id="8vc-6Q-aei">
+                                    <barButtonItem systemItem="add" id="8vc-6Q-aei">
                                         <connections>
                                             <segue destination="Ukk-oU-sAu" kind="show" id="uJa-RK-Zfc"/>
                                         </connections>
