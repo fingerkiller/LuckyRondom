@@ -6,15 +6,12 @@ PODS:
   - SQLCipher/common (3.1.0)
   - SQLCipher/standard (3.1.0):
     - SQLCipher/common
-  - UzysAssetsPickerController (0.9.9)
 
 DEPENDENCIES:
   - FMDB/SQLCipher
-  - UzysAssetsPickerController (~> 0.9.9)
 
 SPEC CHECKSUMS:
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
   SQLCipher: 4684434d5791db86512cd7e02172aefba575849e
-  UzysAssetsPickerController: 47c27bd96955467925f3d4d80b1e2e8aaeff766d
 
 COCOAPODS: 0.39.0

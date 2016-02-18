@@ -22,7 +22,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.47493994039999998" green="0.1172513177" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="JWD-Nr-St3" kind="show" id="gdn-yO-erO"/>
                                 </connections>
@@ -206,7 +205,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d1V-4Z-xeO"/>
         <segue reference="yvE-Zf-Sv2"/>
+        <segue reference="8h4-W2-xEA"/>
     </inferredMetricsTieBreakers>
 </document>

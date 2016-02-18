@@ -19,25 +19,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UzysAssetsPickerController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2762DF1760555EEA8E4C117778DC4124</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>5CCC59A3DA32DC4436DE29C5D16C0243</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7AD08D22D6BB4981CA91627694832802</key>
+		<key>C8CB09423C429C71BEDA5DA2E4CA0517</key>
 		<dict>
 			<key>primary</key>
 			<true/>
