@@ -16,6 +16,10 @@ class LKCandyCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        let screenbounce  = UIScreen.mainScreen().bounds
+        
+        self.bounds = CGRectMake(0, 0, (screenbounce.size.width-40)/3, (screenbounce.size.width-40)/3)
     }
 
 }

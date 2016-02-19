@@ -12,10 +12,45 @@ private let reuseIdentifier = "randomCell"
 
 class RandomCollectionViewController: UICollectionViewController {
 
+    
+    
+    
     var  bucket:LkBucket?
     
     
     
+    
+    
+   
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Register cell classes
+//        self.collectionView!.registerClass(LKCandyCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.registerNib(UINib(nibName: "LKCandyCollectionViewCell", bundle: nil) ,forCellWithReuseIdentifier: reuseIdentifier)
+        
+        let collectionFlowLayout : UICollectionViewFlowLayout = self.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        collectionFlowLayout.minimumInteritemSpacing = 10;
+        collectionFlowLayout.minimumLineSpacing = 10
+        collectionFlowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        let screenbounce  = UIScreen.mainScreen().bounds
+        
+        collectionFlowLayout.itemSize = CGSizeMake((screenbounce.size.width-50)/3.0, (screenbounce.size.width-50)/3.0)
+//        self.collectionViewLayout
+      
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?)
     {
         
@@ -36,24 +71,6 @@ class RandomCollectionViewController: UICollectionViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.registerClass(LKCandyCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        self.collectionView!.registerNib(UINib(nibName: "LKCandyCollectionViewCell", bundle: nil) ,forCellWithReuseIdentifier: reuseIdentifier)
-      
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     
     // MARK: - Navigation
 
