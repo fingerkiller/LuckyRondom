@@ -27,22 +27,22 @@ class LKDbManager: NSObject {
     
     func getDbPath()->String
     {
-        let searchPathArr:NSArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let searchPathArr:NSArray = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let dbpath:String = searchPathArr.lastObject as! String
         
-        return dbpath.stringByAppendingString("/lucky.db")
+        return dbpath + "/lucky.db"
     }
     
     
     func createTables()
     {
-        lkDbBaseq?.inDatabase({ (dbbase:FMDatabase!) -> Void in
+        lkDbBaseq?.inDatabase({ (dbbase) -> Void in
             
-            dbbase.setKey("feixue")
+            dbbase!.setKey("feixue")
             
-            try!dbbase.executeUpdate("create table if not exists Bucket (BucketID TEXT  NOT NULL, MyAccountID TEXT,BucketName TEXT, BucketHeaderPath TEXT,BucketResultNum INTEGER, PRIMARY KEY(BucketID))", values: [])
+            try!dbbase!.executeUpdate("create table if not exists Bucket (BucketID TEXT  NOT NULL, MyAccountID TEXT,BucketName TEXT, BucketHeaderPath TEXT,BucketResultNum INTEGER, PRIMARY KEY(BucketID))", values: [])
             
-            try!dbbase.executeUpdate("create table if not exists Candy (CandyID TEXT  NOT NULL,BucketID TEXT  NOT NULL,CandyName TEXT, CandyimagePath TEXT, PRIMARY KEY(CandyID))", values: [])
+            try!dbbase!.executeUpdate("create table if not exists Candy (CandyID TEXT  NOT NULL,BucketID TEXT  NOT NULL,CandyName TEXT, CandyimagePath TEXT, PRIMARY KEY(CandyID))", values: [])
             
         })
     }

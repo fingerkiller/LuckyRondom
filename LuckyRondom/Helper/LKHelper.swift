@@ -10,14 +10,14 @@ import Foundation
 
 public func FilePath()->String
 {
-    let searchPathArr:NSArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+    let searchPathArr:NSArray = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
     let dbpath:String = searchPathArr.lastObject as! String
     
-    let path = dbpath.stringByAppendingString("/file")
+    let path = dbpath + "/file"
     
-    if(!NSFileManager.defaultManager().fileExistsAtPath(path))
+    if(!FileManager.default.fileExists(atPath: path))
     {
-       _ = try? NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+       _ = try? FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
         
     }
     

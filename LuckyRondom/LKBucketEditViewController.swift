@@ -38,7 +38,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     
     
     
-    func editFinshCandy(acandy : LKCandy)
+    func editFinshCandy(_ acandy : LKCandy)
     {
         
         self.bucket.saveCandy(acandy)
@@ -62,7 +62,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     func drawHeaderView()
     {
         
-        headerImageView = UIImageView.init(frame: CGRectMake(0, 0, self.view.frame.size.width, 200))
+        headerImageView = UIImageView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200))
         
         if((self.bucket.headerFileName?.characters.count) <= 0)
         {
@@ -73,12 +73,12 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
             let image = UIImage.init(contentsOfFile: bucket.headerPath!)
             headerImageView!.image = image
         }
-        headerImageView!.userInteractionEnabled = true;
-        let tapges = UITapGestureRecognizer.init(target: self, action: Selector.init("showImagePicker"))
+        headerImageView!.isUserInteractionEnabled = true;
+        let tapges = UITapGestureRecognizer.init(target: self, action: #selector(LKBucketEditViewController.showImagePicker))
         headerImageView!.addGestureRecognizer(tapges);
         
         
-        headerTF = UITextField.init(frame: CGRectMake(0, 200-30, headerImageView!.frame.size.width, 30));
+        headerTF = UITextField.init(frame: CGRect(x: 0, y: 200-30, width: headerImageView!.frame.size.width, height: 30));
         headerTF?.text = self.bucket.title;
         headerTF?.placeholder = "名称"
         headerImageView!.addSubview(headerTF!)
@@ -102,7 +102,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
 
     }
     
-    func imagePickerhasSelectImage(image: UIImage) {
+    func imagePickerhasSelectImage(_ image: UIImage) {
         self.headerImageView!.image = image
     }
     
@@ -119,7 +119,8 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
             self.bucket.headerFileName =  NSObject.randomID()
         }
         
-        imagedata?.writeToFile(self.bucket.headerPath!, atomically: true)
+        let fileUrl = URL(fileURLWithPath: self.bucket.headerPath!)
+       _=try? imagedata?.write(to: fileUrl , options: .atomic)
         
         self.bucket?.title = headerTF?.text
         self.bucket?.savetoLocal()
@@ -134,7 +135,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAtIndexPath indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
@@ -142,37 +143,37 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     
     
     // Override to support editing the table view.
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
+        if editingStyle == .delete {
             // Delete the row from the data source
             
-             let candy:LKCandy = self.bucket.sourceCandies[indexPath.row] as! LKCandy
+             let candy:LKCandy = self.bucket.sourceCandies[(indexPath as NSIndexPath).row] as! LKCandy
             
             LKCandyDao.deleteCandy(candy);
-            self.bucket.sourceCandies.removeObjectAtIndex(indexPath.row);
+            self.bucket.sourceCandies.removeObject(at: (indexPath as NSIndexPath).row);
             
             
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(_ tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.bucket.sourceCandies.count
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("candycell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "candycell", for: indexPath)
         
         // Configure the cell...
-        let candy:LKCandy = self.bucket.sourceCandies[indexPath.row] as! LKCandy
+        let candy:LKCandy = self.bucket.sourceCandies[(indexPath as NSIndexPath).row] as! LKCandy
         if(candy.imageName?.characters.count>0)
         {
             let image = UIImage.init(contentsOfFile: (candy.imagePath)!)
@@ -183,7 +184,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath)
     {
         
         
@@ -193,15 +194,15 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         if(segue.identifier=="editpush")
         {
-            let indexPath:NSIndexPath = self.bktableview.indexPathForCell(sender as! UITableViewCell)! as NSIndexPath
+            let indexPath:IndexPath = self.bktableview.indexPath(for: sender as! UITableViewCell)! as IndexPath
             
-            let candy:LKCandy = self.bucket.sourceCandies[indexPath.row] as! LKCandy
+            let candy:LKCandy = self.bucket.sourceCandies[(indexPath as NSIndexPath).row] as! LKCandy
             
             let destinationVC:LKCandyEditViewController = segue.destinationViewController as! LKCandyEditViewController;
             destinationVC.candy = candy;

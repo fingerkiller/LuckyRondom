@@ -31,16 +31,16 @@ class RandomCollectionViewController: UICollectionViewController {
 
         // Register cell classes
 //        self.collectionView!.registerClass(LKCandyCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        self.collectionView!.registerNib(UINib(nibName: "LKCandyCollectionViewCell", bundle: nil) ,forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UINib(nibName: "LKCandyCollectionViewCell", bundle: nil) ,forCellWithReuseIdentifier: reuseIdentifier)
         
         let collectionFlowLayout : UICollectionViewFlowLayout = self.collectionViewLayout as! UICollectionViewFlowLayout
         
         collectionFlowLayout.minimumInteritemSpacing = 10;
         collectionFlowLayout.minimumLineSpacing = 10
         collectionFlowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
-        let screenbounce  = UIScreen.mainScreen().bounds
+        let screenbounce  = UIScreen.main().bounds
         
-        collectionFlowLayout.itemSize = CGSizeMake((screenbounce.size.width-50)/3.0, (screenbounce.size.width-50)/3.0)
+        collectionFlowLayout.itemSize = CGSize(width: (screenbounce.size.width-50)/3.0, height: (screenbounce.size.width-50)/3.0)
 //        self.collectionViewLayout
       
         // Do any additional setup after loading the view.
@@ -51,22 +51,22 @@ class RandomCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?)
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?)
     {
         
         self.bucket?.rollCandy();
         
         let candy:LKCandy = self.bucket?.resultCandies!.firstObject as! LKCandy;
         
-        let alert = UIAlertController.init(title: candy.name, message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController.init(title: candy.name, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
-        let alertaction = UIAlertAction.init(title: "ok", style: UIAlertActionStyle.Cancel) { (UIAlertAction) -> Void in
+        let alertaction = UIAlertAction.init(title: "ok", style: UIAlertActionStyle.cancel) { (UIAlertAction) -> Void in
             
         }
         
         alert.addAction(alertaction);
         
-        self.presentViewController(alert, animated: true) { () -> Void in
+        self.present(alert, animated: true) { () -> Void in
             
         }
     }
@@ -75,7 +75,7 @@ class RandomCollectionViewController: UICollectionViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         
@@ -97,24 +97,24 @@ class RandomCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return (self.bucket?.sourceCandies.count)!
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! LKCandyCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! LKCandyCollectionViewCell
     
         
         // Configure the cell
         
-        let candy:LKCandy = (self.bucket?.sourceCandies[indexPath.row])! as! LKCandy;
+        let candy:LKCandy = (self.bucket?.sourceCandies[(indexPath as NSIndexPath).row])! as! LKCandy;
         
         cell.titleLb.text = candy.name;
         
@@ -125,7 +125,7 @@ class RandomCollectionViewController: UICollectionViewController {
         }
         else
         {
-            cell.backgroundColor = UIColor.orangeColor()
+            cell.backgroundColor = UIColor.orange()
         }
         
         

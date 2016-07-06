@@ -48,7 +48,7 @@ class LkBucket: NSObject {
     }
     
     
-    func saveCandy(candy:LKCandy)
+    func saveCandy(_ candy:LKCandy)
     {
         candy.bucketID = self.ID
         LKCandyDao.saveCandy(candy)
@@ -67,13 +67,13 @@ class LkBucket: NSObject {
             
             let candy = self.sourceCandies[dex];
             
-            if((self.resultCandies?.containsObject(candy)) != false)
+            if((self.resultCandies?.contains(candy)) != false)
             {
                 continue
             }
             else
             {
-                self.resultCandies?.addObject(candy)
+                self.resultCandies?.add(candy)
                 rollnum=rollnum!-1;
             }
             

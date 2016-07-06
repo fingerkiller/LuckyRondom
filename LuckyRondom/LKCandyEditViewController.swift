@@ -13,7 +13,7 @@ import UIKit
 
 @objc protocol CandyEditDelegate:NSObjectProtocol
 {
-    func editFinshCandy(acandy : LKCandy);
+    func editFinshCandy(_ acandy : LKCandy);
 }
 
 
@@ -60,8 +60,8 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        let tap = UITapGestureRecognizer.init(target: self, action: Selector.init("showImagePicker"))
-        self.imageView.userInteractionEnabled = true
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(LKCandyEditViewController.showImagePicker))
+        self.imageView.isUserInteractionEnabled = true
         self.imageView.addGestureRecognizer(tap);
     }
     
@@ -78,7 +78,7 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
         
     }
     
-    func imagePickerhasSelectImage(image: UIImage) {
+    func imagePickerhasSelectImage(_ image: UIImage) {
         self.imageView.image = image
     }
     
@@ -97,18 +97,21 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
             
             let imagedata = UIImagePNGRepresentation((self.imageView.image)!);
             
-             imagedata?.writeToFile(self.candy.imagePath!, atomically: true)
+            let fileUrl = URL(fileURLWithPath: self.candy.imagePath!)
+            
+             _=try? imagedata?.write(to: fileUrl, options: .atomic)
+            
         }
         
         
        
         
-        if ((self.delegate?.respondsToSelector(Selector.init("editFinshCandy"))) != nil)
+        if ((self.delegate?.responds(to: Selector.init(("editFinshCandy")))) != nil)
         {
             self.delegate?.editFinshCandy(self.candy)
             
         }
-        self.navigationController?.popViewControllerAnimated(true)
+        _=self.navigationController?.popViewController(animated: true)
     }
     
 
@@ -119,20 +122,20 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 2
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("candyeditCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "candyeditCell", for: indexPath)
         
         let subviews:Array! = cell.contentView.subviews
         
@@ -141,11 +144,11 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
             view.removeFromSuperview()
         }
         
-        if(indexPath.row==0)
+        if((indexPath as NSIndexPath).row==0)
         {
-            self.imageView.frame = CGRectMake(0, 0, 150, 150)
-            self.imageView.center = CGPointMake(self.view.frame.size.width/2.0, 150/2.0)
-            self.imageView.backgroundColor = UIColor.redColor()
+            self.imageView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+            self.imageView.center = CGPoint(x: self.view.frame.size.width/2.0, y: 150/2.0)
+            self.imageView.backgroundColor = UIColor.red()
             
             if(self.candy.imageName?.characters.count>0)
             {
@@ -158,7 +161,7 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
         }
         else
         {
-            self.titleTF.frame = CGRectMake(15, 15, self.view.frame.size.width-30, 30)
+            self.titleTF.frame = CGRect(x: 15, y: 15, width: self.view.frame.size.width-30, height: 30)
             self.titleTF.placeholder = "名称"
             self.titleTF.text = self.candy.name
             cell.contentView.addSubview(self.titleTF)
@@ -167,8 +170,8 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
         
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row==0
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (indexPath as NSIndexPath).row==0
         {
             return 150;
         }

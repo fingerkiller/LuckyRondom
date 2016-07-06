@@ -12,7 +12,7 @@ extension NSObject
     
     class func randomID()->String
     {
-       return NSUUID().UUIDString;
+       return UUID().uuidString;
         
     }
     

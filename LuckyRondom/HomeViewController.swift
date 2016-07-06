@@ -30,7 +30,7 @@ class HomeViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.refreshView()
     }
@@ -42,22 +42,22 @@ class HomeViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return bucketsArr!.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath)
 
         // Configure the cell...
-        let bucket:LkBucket = bucketsArr![indexPath.row]
+        let bucket:LkBucket = bucketsArr![(indexPath as NSIndexPath).row]
         
         let image = UIImage.init(contentsOfFile: bucket.headerPath!)
         
@@ -71,7 +71,7 @@ class HomeViewController: UITableViewController {
 
     
     // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
@@ -79,18 +79,18 @@ class HomeViewController: UITableViewController {
 
     
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             // Delete the row from the data source
             
-            let bucket:LkBucket = bucketsArr![indexPath.row]
+            let bucket:LkBucket = bucketsArr![(indexPath as NSIndexPath).row]
             
             LKBucketDao.deleteBucket(bucket);
             LKCandyDao.deleteAllCandys(from: bucket.ID!);
-            bucketsArr?.removeAtIndex(indexPath.row);
+            bucketsArr?.remove(at: (indexPath as NSIndexPath).row);
             
             
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
@@ -114,7 +114,7 @@ class HomeViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
@@ -124,8 +124,8 @@ class HomeViewController: UITableViewController {
         }
         else
         {
-            let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
-            let bucket:LkBucket = bucketsArr![indexPath!.row]
+            let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)
+            let bucket:LkBucket = bucketsArr![(indexPath! as NSIndexPath).row]
             bucket.sourceCandies = LKCandyDao.getAllCandys(from: bucket.ID);
             let randomVC:RandomCollectionViewController = segue.destinationViewController as! RandomCollectionViewController
             randomVC.bucket = bucket

@@ -12,7 +12,7 @@ import UIKit
 @objc protocol ImagePickerDelegate
 {
     
-   optional func imagePickerhasSelectImage(image:UIImage)
+   @objc optional func imagePickerhasSelectImage(_ image:UIImage)
 }
 
 
@@ -23,64 +23,47 @@ class LKImagePicker: NSObject,UIImagePickerControllerDelegate,UINavigationContro
     
     private var _contentVC:UIViewController?
     
-    func showIn(vc:UIViewController)
+    func showIn(_ vc:UIViewController)
     {
         _contentVC = vc
         
-        let actionsheet = UIAlertController.init(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet);
+        let actionsheet = UIAlertController.init(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet);
         
-        let actionphoto = UIAlertAction.init(title: "图库", style: UIAlertActionStyle.Default) { (action) -> Void in
+        let actionphoto = UIAlertAction.init(title: "图库", style: UIAlertActionStyle.default) { (action) -> Void in
             
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary)
             {
-                self.showPicVC(UIImagePickerControllerSourceType.PhotoLibrary)
+                self.showPicVC(UIImagePickerControllerSourceType.photoLibrary)
             }
             
             
         }
         
-        let actioncamer = UIAlertAction.init(title: "照相", style: UIAlertActionStyle.Default) { (action) -> Void in
+        let actioncamer = UIAlertAction.init(title: "照相", style: UIAlertActionStyle.default) { (action) -> Void in
             
-            if UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Rear)
+            if UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.rear)
             {
-                self.showPicVC(UIImagePickerControllerSourceType.Camera)
+                self.showPicVC(UIImagePickerControllerSourceType.camera)
             }
         }
         
         actionsheet.addAction(actionphoto)
         actionsheet.addAction(actioncamer)
         
-        vc.presentViewController(actionsheet, animated: true) { () -> Void in
+        vc.present(actionsheet, animated: true) { () -> Void in
             
         }
     }
     
-    private func showPicVC(type:UIImagePickerControllerSourceType)
+    private func showPicVC(_ type:UIImagePickerControllerSourceType)
     {
-        let imagePicker = UIImagePickerController.init()
-        imagePicker.sourceType = type
-        imagePicker.delegate = self
-        
-        _contentVC?.presentViewController(imagePicker, animated: true, completion: { () -> Void in
+        if (UIImagePickerController.isSourceTypeAvailable(type)) {
+            let imagePicker = UIImagePickerController()
+//            imagePicker.sourceType = type
+            imagePicker.delegate = self
             
-        })
-        
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        
-        picker.dismissViewControllerAnimated(true) { () -> Void in
-            
-            let image =  info[UIImagePickerControllerOriginalImage] as! UIImage
-            
-            let screenbounce  = UIScreen.mainScreen().bounds
-            
-            let vpipic =  VPImageCropperViewController.init(image: image, cropFrame: CGRectMake((screenbounce.width-100)/2, 100, 100, 100), limitScaleRatio: 3);
-            
-            vpipic.delegate = self
-            
-            self._contentVC?.presentViewController(vpipic, animated: true, completion: { () -> Void in
+//            let tempVC = UINavigationController();
+            _contentVC?.present(imagePicker, animated: true, completion: {
                 
             })
             
@@ -88,18 +71,39 @@ class LKImagePicker: NSObject,UIImagePickerControllerDelegate,UINavigationContro
         
     }
     
-    func imageCropper(cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        
+        picker.dismiss(animated: true) { () -> Void in
+            
+            let image =  info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            let screenbounce  = UIScreen.main().bounds
+            
+            let vpipic =  VPImageCropperViewController( image: image, cropFrame: CGRect(x: (screenbounce.width-100)/2, y: 100, width: 100, height: 100), limitScaleRatio: 3);
+            
+            vpipic?.delegate = self
+            
+            self._contentVC?.present(vpipic!, animated: true, completion: { () -> Void in
+                
+            })
+            
+        }
+        
+    }
+    
+    func imageCropper(_ cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
         
         self.delegate?.imagePickerhasSelectImage?(editedImage)
         
-        cropperViewController.dismissViewControllerAnimated(true) { () -> Void in
+        cropperViewController.dismiss(animated: true) { () -> Void in
             
         }
     }
     
-    func imageCropperDidCancel(cropperViewController: VPImageCropperViewController!) {
+    func imageCropperDidCancel(_ cropperViewController: VPImageCropperViewController!) {
         
-        cropperViewController.dismissViewControllerAnimated(true) { () -> Void in
+        cropperViewController.dismiss(animated: true) { () -> Void in
             
         }
     }
