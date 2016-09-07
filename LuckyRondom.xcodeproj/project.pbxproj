@@ -321,6 +321,7 @@
 				TargetAttributes = {
 					0CED9BBF1C5B0DC0007A19BD = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8ANL693YYL;
 						LastSwiftMigration = 0800;
 					};
 					0CED9BD31C5B0DC0007A19BD = {
@@ -595,6 +596,7 @@
 			baseConfigurationReference = 63AD339E5FEC3C18FCA8F90E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8ANL693YYL;
 				INFOPLIST_FILE = LuckyRondom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.waytl.LuckyRondom;
@@ -609,6 +611,7 @@
 			baseConfigurationReference = 8319D9E7C19ADB8A6E728870 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8ANL693YYL;
 				INFOPLIST_FILE = LuckyRondom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.waytl.LuckyRondom;

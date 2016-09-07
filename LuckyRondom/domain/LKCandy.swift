@@ -32,7 +32,6 @@ public class LKCandy: NSObject {
         
         self.ID = NSObject.randomID();
         self.name = ""
-        self.imageName = ""
     }
     
 }

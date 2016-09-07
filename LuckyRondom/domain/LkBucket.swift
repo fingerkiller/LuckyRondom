@@ -35,8 +35,6 @@ class LkBucket: NSObject {
     override init() {
         super.init()
         self.ID = NSObject.randomID();
-        self.title = "";
-        self.headerFileName = "";
         self.resultNum = 1
     }
     

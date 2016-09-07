@@ -18,21 +18,8 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     private var _bucket:LkBucket?
     private var _imagePicker:LKImagePicker?
     
-    var bucket:LkBucket!{
-        get
-        {
-            if(_bucket == nil)
-            {
-                _bucket = LkBucket();
-            }
-            
-            return _bucket
-        }
-        set(newValue)
-        {
-            _bucket = newValue
-        }
-    };
+    lazy var  bucket : LkBucket = LkBucket();
+    
     
     
     
@@ -122,8 +109,8 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
         let fileUrl = URL(fileURLWithPath: self.bucket.headerPath!)
        _=try? imagedata?.write(to: fileUrl , options: .atomic)
         
-        self.bucket?.title = headerTF?.text
-        self.bucket?.savetoLocal()
+        self.bucket.title = headerTF?.text
+        self.bucket.savetoLocal()
         
         
     }
@@ -194,7 +181,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
