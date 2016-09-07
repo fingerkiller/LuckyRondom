@@ -64,7 +64,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
         
         headerImageView = UIImageView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200))
         
-        if((self.bucket.headerFileName?.characters.count) <= 0)
+        if(self.bucket.headerFileName == nil)
         {
             headerImageView!.image = UIImage.init(named: "shaizi.jpg")
         }
@@ -114,7 +114,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
         
         let imagedata = UIImagePNGRepresentation((headerImageView?.image)!);
         
-        if((self.bucket.headerFileName?.characters.count) <= 0)
+        if(self.bucket.headerFileName == nil)
         {
             self.bucket.headerFileName =  NSObject.randomID()
         }
@@ -174,7 +174,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
         
         // Configure the cell...
         let candy:LKCandy = self.bucket.sourceCandies[(indexPath as NSIndexPath).row] as! LKCandy
-        if(candy.imageName?.characters.count>0)
+        if(candy.imageName != nil)
         {
             let image = UIImage.init(contentsOfFile: (candy.imagePath)!)
             cell.imageView!.image = image
@@ -194,7 +194,7 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
@@ -204,13 +204,13 @@ class LKBucketEditViewController: UIViewController,CandyEditDelegate,UIImagePick
             
             let candy:LKCandy = self.bucket.sourceCandies[(indexPath as NSIndexPath).row] as! LKCandy
             
-            let destinationVC:LKCandyEditViewController = segue.destinationViewController as! LKCandyEditViewController;
+            let destinationVC:LKCandyEditViewController = segue.destination as! LKCandyEditViewController;
             destinationVC.candy = candy;
             destinationVC.delegate = self;
         }
         else
         {
-            let destinationVC:LKCandyEditViewController = segue.destinationViewController as! LKCandyEditViewController;
+            let destinationVC:LKCandyEditViewController = segue.destination as! LKCandyEditViewController;
             
             destinationVC.delegate = self;
         }

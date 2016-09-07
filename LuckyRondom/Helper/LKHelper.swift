@@ -10,8 +10,8 @@ import Foundation
 
 public func FilePath()->String
 {
-    let searchPathArr:NSArray = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-    let dbpath:String = searchPathArr.lastObject as! String
+    let searchPathArr:Array = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+    let dbpath:String = searchPathArr.last!
     
     let path = dbpath + "/file"
     

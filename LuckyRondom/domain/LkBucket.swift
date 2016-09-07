@@ -17,7 +17,7 @@ class LkBucket: NSObject {
     var headerFileName:String?//图片路径
     var headerPath:String?{
         get{
-            if(headerFileName?.characters.count<=0)
+            if(headerFileName==nil)
             {
                 return ""
             }
@@ -25,7 +25,7 @@ class LkBucket: NSObject {
         }
     }
     
-    var resultNum:Int?//结果数
+    var resultNum:Int = 0//结果数
     
     lazy var sourceCandies:NSMutableArray=NSMutableArray()//数据源
     
@@ -74,7 +74,7 @@ class LkBucket: NSObject {
             else
             {
                 self.resultCandies?.add(candy)
-                rollnum=rollnum!-1;
+                rollnum=rollnum-1;
             }
             
         }

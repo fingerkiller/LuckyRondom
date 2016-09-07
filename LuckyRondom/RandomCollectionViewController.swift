@@ -38,7 +38,7 @@ class RandomCollectionViewController: UICollectionViewController {
         collectionFlowLayout.minimumInteritemSpacing = 10;
         collectionFlowLayout.minimumLineSpacing = 10
         collectionFlowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
-        let screenbounce  = UIScreen.main().bounds
+        let screenbounce  = UIScreen.main.bounds
         
         collectionFlowLayout.itemSize = CGSize(width: (screenbounce.size.width-50)/3.0, height: (screenbounce.size.width-50)/3.0)
 //        self.collectionViewLayout
@@ -75,13 +75,13 @@ class RandomCollectionViewController: UICollectionViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+     func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         
         if(segue.identifier=="edit")
         {
-            let targetVC:LKBucketEditViewController  = segue.destinationViewController as! LKBucketEditViewController
+            let targetVC:LKBucketEditViewController  = segue.destination as! LKBucketEditViewController
             
             targetVC.bucket = self.bucket;
             
@@ -105,7 +105,16 @@ class RandomCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return (self.bucket?.sourceCandies.count)!
+        
+        if self.bucket == nil {
+            return 0;
+        }
+        else
+        {
+            return self.bucket!.sourceCandies.count
+        }
+        
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -118,14 +127,14 @@ class RandomCollectionViewController: UICollectionViewController {
         
         cell.titleLb.text = candy.name;
         
-        if(candy.imageName?.characters.count>0)
+        if(candy.imageName != nil)
         {
             let image = UIImage.init(contentsOfFile: (candy.imagePath)!)
             cell.bkImage.image = image;
         }
         else
         {
-            cell.backgroundColor = UIColor.orange()
+            cell.backgroundColor = UIColor.orange
         }
         
         

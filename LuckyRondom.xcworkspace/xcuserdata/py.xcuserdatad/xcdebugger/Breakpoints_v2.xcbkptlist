@@ -27,13 +27,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LuckyRondom/LKBucketEditViewController.swift"
-            timestampString = "487999718.382725"
+            filePath = "LuckyRondom/HomeViewController.swift"
+            timestampString = "494759942.108664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "showImagePicker()"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -44,12 +44,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LuckyRondom/Helper/LKImagePicker.swift"
-            timestampString = "489490309.81661"
+            timestampString = "494759410.447813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "showIn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -60,43 +60,107 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LuckyRondom/Helper/LKImagePicker.swift"
-            timestampString = "489490309.81661"
+            timestampString = "494759416.723435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "showPicVC(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LuckyRondom/Helper/LKImagePicker.swift"
+            timestampString = "494759459.895918"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "showIn(_:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "LuckyRondom.LKImagePicker.imagePickerController (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; ()"
+                  symbolName = "LuckyRondom.LKImagePicker.showIn (__ObjC.UIViewController) -&gt; ()"
                   moduleName = "LuckyRondom"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/Helper/LKImagePicker.swift"
-                  timestampString = "489490309.931894"
+                  timestampString = "494927151.111086"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "23">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "896">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "LuckyRondom.LKImagePicker.(imagePickerController (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; ()).(closure #1)"
+                  symbolName = "LuckyRondom.LKImagePicker.(showIn (__ObjC.UIViewController) -&gt; ()).(closure #3)"
                   moduleName = "LuckyRondom"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/Helper/LKImagePicker.swift"
-                  timestampString = "489490309.933123"
+                  timestampString = "494927151.112309"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "26">
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LuckyRondom/Helper/LKImagePicker.swift"
+            timestampString = "494759467.705589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "showIn(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LuckyRondom.LKImagePicker.showIn (__ObjC.UIViewController) -&gt; ()"
+                  moduleName = "LuckyRondom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/Helper/LKImagePicker.swift"
+                  timestampString = "494927151.114614"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1230">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LuckyRondom.LKImagePicker.(showIn (__ObjC.UIViewController) -&gt; ()).(closure #3)"
+                  moduleName = "LuckyRondom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/py/Desktop/LuckyRondom/LuckyRondom/Helper/LKImagePicker.swift"
+                  timestampString = "494927151.116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "4">
                </Location>
             </Locations>
          </BreakpointContent>

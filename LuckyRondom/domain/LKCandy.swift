@@ -18,7 +18,7 @@ public class LKCandy: NSObject {
     
     var imagePath:String?{
         get{
-            if(imageName?.characters.count<=0)
+            if(imageName==nil)
             {
                 return ""
             }

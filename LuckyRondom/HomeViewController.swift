@@ -114,7 +114,7 @@ class HomeViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+     func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
@@ -127,7 +127,7 @@ class HomeViewController: UITableViewController {
             let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)
             let bucket:LkBucket = bucketsArr![(indexPath! as NSIndexPath).row]
             bucket.sourceCandies = LKCandyDao.getAllCandys(from: bucket.ID);
-            let randomVC:RandomCollectionViewController = segue.destinationViewController as! RandomCollectionViewController
+            let randomVC:RandomCollectionViewController = segue.destination as! RandomCollectionViewController
             randomVC.bucket = bucket
         }
         

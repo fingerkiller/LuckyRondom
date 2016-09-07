@@ -71,14 +71,14 @@ class LKImagePicker: NSObject,UIImagePickerControllerDelegate,UINavigationContro
         
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         
         picker.dismiss(animated: true) { () -> Void in
             
             let image =  info[UIImagePickerControllerOriginalImage] as! UIImage
             
-            let screenbounce  = UIScreen.main().bounds
+            let screenbounce  = UIScreen.main.bounds
             
             let vpipic =  VPImageCropperViewController( image: image, cropFrame: CGRect(x: (screenbounce.width-100)/2, y: 100, width: 100, height: 100), limitScaleRatio: 3);
             
@@ -91,6 +91,7 @@ class LKImagePicker: NSObject,UIImagePickerControllerDelegate,UINavigationContro
         }
         
     }
+    
     
     func imageCropper(_ cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
         

@@ -64,7 +64,7 @@ class LKBucketDao: NSObject {
         let userid:String = LKAccount.currentAccount.ID
         dbq.lkDbBaseq?.inDatabase({ (dbp)  in
             
-            _=try?dbp!.executeUpdate("insert into  Bucket (BucketID,MyAccountID,BucketName,BucketHeaderPath,BucketResultNum) values (?,?,?,?,?)", values: [bucket.ID!,userid,bucket.title!,bucket.headerFileName!,bucket.resultNum!])
+            _=try?dbp!.executeUpdate("insert into  Bucket (BucketID,MyAccountID,BucketName,BucketHeaderPath,BucketResultNum) values (?,?,?,?,?)", values: [bucket.ID!,userid,bucket.title!,bucket.headerFileName!,bucket.resultNum])
             
         })
     }
@@ -86,7 +86,7 @@ class LKBucketDao: NSObject {
         
         dbq.lkDbBaseq?.inDatabase({ (dbp) -> Void in
             
-            _=try?dbp!.executeUpdate("UPDATE Bucket SET BucketName = ?,BucketHeaderPath=?,BucketResultNum=? where BucketID = ?", values: [bucket.title!,bucket.headerFileName!,bucket.resultNum!,bucket.ID!]);
+            _=try?dbp!.executeUpdate("UPDATE Bucket SET BucketName = ?,BucketHeaderPath=?,BucketResultNum=? where BucketID = ?", values: [bucket.title!,bucket.headerFileName!,bucket.resultNum,bucket.ID!]);
             
         })
     }
