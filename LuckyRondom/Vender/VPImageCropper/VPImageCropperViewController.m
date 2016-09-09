@@ -59,7 +59,8 @@
     return NO;
 }
 
-- (void)initView {
+- (void)initView
+{
     self.view.backgroundColor = [UIColor blackColor];
     
     self.showImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -67,13 +68,13 @@
     [self.showImgView setUserInteractionEnabled:YES];
     [self.showImgView setImage:self.originalImage];
     [self.showImgView setUserInteractionEnabled:YES];
-    [self.showImgView setMultipleTouchEnabled:YES];
-    
+   
     // scale to fit the screen
     
     CGFloat oriWidth,oriHeight,oriX,oriY;
     
-    if (self.originalImage.size.width/self.originalImage.size.height<self.cropFrame.size.width/self.cropFrame.size.height) {
+    if (self.originalImage.size.width/self.originalImage.size.height<self.cropFrame.size.width/self.cropFrame.size.height)
+    {
         
         oriWidth = self.cropFrame.size.width;
         oriHeight = self.originalImage.size.height * (oriWidth / self.originalImage.size.width);
@@ -91,7 +92,9 @@
     self.latestFrame = self.oldFrame;
     self.showImgView.frame = self.oldFrame;
     
-    self.largeFrame = CGRectMake(0, 0, self.limitRatio * self.oldFrame.size.width, self.limitRatio * self.oldFrame.size.height);
+    CGFloat maxW =MAX(self.limitRatio * self.oldFrame.size.width,self.originalImage.size.width/[[UIScreen mainScreen] scale]);
+    CGFloat maxH = MAX(self.limitRatio * self.oldFrame.size.height, self.originalImage.size.height/[[UIScreen mainScreen] scale]);
+    self.largeFrame = CGRectMake(0, 0, maxW , maxH);
     
     [self addGestureRecognizers];
     [self.view addSubview:self.showImgView];
@@ -104,7 +107,7 @@
     [self.view addSubview:self.overlayView];
     
     self.ratioView = [[UIView alloc] initWithFrame:self.cropFrame];
-    self.ratioView.layer.borderColor = [UIColor yellowColor].CGColor;
+    self.ratioView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.ratioView.layer.borderWidth = 1.0f;
     self.ratioView.autoresizingMask = UIViewAutoresizingNone;
     [self.view addSubview:self.ratioView];
@@ -113,70 +116,51 @@
 }
 
 - (void)initControlBtn {
-    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50.0f, 100, 50)];
-    cancelBtn.backgroundColor = [UIColor blackColor];
-    cancelBtn.titleLabel.textColor = [UIColor whiteColor];
-    [cancelBtn setTitle:@"Cancel" forState:UIControlStateNormal];
-    [cancelBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
-    [cancelBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [cancelBtn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    [cancelBtn.titleLabel setNumberOfLines:0];
-    [cancelBtn setTitleEdgeInsets:UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f)];
-    [cancelBtn addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:cancelBtn];
     
-    UIButton *confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100.0f, self.view.frame.size.height - 50.0f, 100, 50)];
-    confirmBtn.backgroundColor = [UIColor blackColor];
-    confirmBtn.titleLabel.textColor = [UIColor whiteColor];
-    [confirmBtn setTitle:@"OK" forState:UIControlStateNormal];
-    [confirmBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
-    [confirmBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    confirmBtn.titleLabel.textColor = [UIColor whiteColor];
-    [confirmBtn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    [confirmBtn.titleLabel setNumberOfLines:0];
-    [confirmBtn setTitleEdgeInsets:UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f)];
-    [confirmBtn addTarget:self action:@selector(confirm:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:confirmBtn];
+    
+    UINavigationItem * navItem =  [[UINavigationItem alloc] init];
+    
+    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(confirm:) ];
+    [rightItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateNormal];
+    navItem.rightBarButtonItem = rightItem;
+    
+    
+    UIBarButtonItem * leftItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:) ];
+    [leftItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]} forState:UIControlStateNormal];
+    navItem.leftBarButtonItem = leftItem;
+    
+    
+    UINavigationBar * navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64)];
+    navBar.items = @[navItem];
+    [self.view addSubview:navBar];
+    
+
 }
 
 - (void)cancel:(id)sender {
-    if (self.delegate && [self.delegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
-        [self.delegate imageCropperDidCancel:self];
+    if (self.cropperDelegate && [self.cropperDelegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
+        [self.cropperDelegate imageCropperDidCancel:self];
     }
 }
 
 - (void)confirm:(id)sender {
-    if (self.delegate && [self.delegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
-        [self.delegate imageCropper:self didFinished:[self getSubImage]];
+    if (self.cropperDelegate && [self.cropperDelegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
+        [self.cropperDelegate imageCropper:self didFinished:[self getSubImage]];
     }
 }
 
 - (void)overlayClipping
 {
+    UIBezierPath * bePath  = [UIBezierPath bezierPathWithRect:self.overlayView.bounds];
+    UIBezierPath * framepath =[UIBezierPath bezierPathWithRect:self.ratioView.frame];
+    [bePath appendPath:[framepath bezierPathByReversingPath]];
+    
+    
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    CGMutablePathRef path = CGPathCreateMutable();
-    // Left side of the ratio view
-    CGPathAddRect(path, nil, CGRectMake(0, 0,
-                                        self.ratioView.frame.origin.x,
-                                        self.overlayView.frame.size.height));
-    // Right side of the ratio view
-    CGPathAddRect(path, nil, CGRectMake(
-                                        self.ratioView.frame.origin.x + self.ratioView.frame.size.width,
-                                        0,
-                                        self.overlayView.frame.size.width - self.ratioView.frame.origin.x - self.ratioView.frame.size.width,
-                                        self.overlayView.frame.size.height));
-    // Top side of the ratio view
-    CGPathAddRect(path, nil, CGRectMake(0, 0,
-                                        self.overlayView.frame.size.width,
-                                        self.ratioView.frame.origin.y));
-    // Bottom side of the ratio view
-    CGPathAddRect(path, nil, CGRectMake(0,
-                                        self.ratioView.frame.origin.y + self.ratioView.frame.size.height,
-                                        self.overlayView.frame.size.width,
-                                        self.overlayView.frame.size.height - self.ratioView.frame.origin.y + self.ratioView.frame.size.height));
-    maskLayer.path = path;
+
+    maskLayer.path = bePath.CGPath;
     self.overlayView.layer.mask = maskLayer;
-    CGPathRelease(path);
+    
 }
 
 // register all gestures
@@ -239,10 +223,14 @@
 - (CGRect)handleScaleOverflow:(CGRect)newFrame {
     // bounce to original frame
     CGPoint oriCenter = CGPointMake(newFrame.origin.x + newFrame.size.width/2, newFrame.origin.y + newFrame.size.height/2);
-    if (newFrame.size.width < self.oldFrame.size.width) {
+    if (newFrame.size.width < self.oldFrame.size.width||
+        newFrame.size.height<self.oldFrame.size.height)
+    {
         newFrame = self.oldFrame;
     }
-    if (newFrame.size.width > self.largeFrame.size.width) {
+    if (newFrame.size.width > self.largeFrame.size.width||
+        newFrame.size.height>self.largeFrame.size.height)
+    {
         newFrame = self.largeFrame;
     }
     newFrame.origin.x = oriCenter.x - newFrame.size.width/2;
@@ -253,10 +241,15 @@
 - (CGRect)handleBorderOverflow:(CGRect)newFrame {
     // horizontally
     if (newFrame.origin.x > self.cropFrame.origin.x) newFrame.origin.x = self.cropFrame.origin.x;
-    if (CGRectGetMaxX(newFrame) < self.cropFrame.size.width) newFrame.origin.x = self.cropFrame.size.width - newFrame.size.width;
+    if (CGRectGetMaxX(newFrame) < self.cropFrame.size.width+self.cropFrame.origin.x)
+    {
+        newFrame.origin.x = self.cropFrame.size.width+self.cropFrame.origin.x - newFrame.size.width;
+    }
+    
     // vertically
     if (newFrame.origin.y > self.cropFrame.origin.y) newFrame.origin.y = self.cropFrame.origin.y;
-    if (CGRectGetMaxY(newFrame) < self.cropFrame.origin.y + self.cropFrame.size.height) {
+    if (CGRectGetMaxY(newFrame) < self.cropFrame.origin.y + self.cropFrame.size.height)
+    {
         newFrame.origin.y = self.cropFrame.origin.y + self.cropFrame.size.height - newFrame.size.height;
     }
     // adapt horizontally rectangle
@@ -299,6 +292,15 @@
     UIGraphicsEndImageContext();
     return smallImage;
 }
+
+
+
+
+
+
+
+
+
 
 - (UIImage *)fixOrientation:(UIImage *)srcImg {
     if (srcImg.imageOrientation == UIImageOrientationUp) return srcImg;

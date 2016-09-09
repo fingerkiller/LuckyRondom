@@ -12,7 +12,6 @@
 
 @protocol VPImageCropperDelegate <NSObject>
 
-@optional
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage;
 - (void)imageCropperDidCancel:(VPImageCropperViewController *)cropperViewController;
 
@@ -21,7 +20,7 @@
 @interface VPImageCropperViewController : UIViewController
 
 @property (nonatomic, assign) NSInteger tag;
-@property (nonatomic, assign) id<VPImageCropperDelegate> delegate;
+@property (nonatomic, assign) id<VPImageCropperDelegate> cropperDelegate;
 @property (nonatomic, assign) CGRect cropFrame;
 
 - (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio;

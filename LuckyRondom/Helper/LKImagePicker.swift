@@ -81,7 +81,7 @@ class LKImagePicker: NSObject,UIImagePickerControllerDelegate,UINavigationContro
             
             let vpipic =  VPImageCropperViewController( image: image, cropFrame: CGRect(x: (screenbounce.width-100)/2, y: 100, width: 100, height: 100), limitScaleRatio: 3);
             
-            vpipic?.delegate = self
+            vpipic?.cropperDelegate = self
             
             self._contentVC?.present(vpipic!, animated: true, completion: { () -> Void in
                 
