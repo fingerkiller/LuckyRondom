@@ -59,10 +59,9 @@ class LKImagePicker: NSObject,UIImagePickerControllerDelegate,UINavigationContro
     {
         if (UIImagePickerController.isSourceTypeAvailable(type)) {
             let imagePicker = UIImagePickerController()
-//            imagePicker.sourceType = type
+            imagePicker.sourceType = type
             imagePicker.delegate = self
             
-//            let tempVC = UINavigationController();
             _contentVC?.present(imagePicker, animated: true, completion: {
                 
             })
@@ -87,7 +86,6 @@ class LKImagePicker: NSObject,UIImagePickerControllerDelegate,UINavigationContro
             self._contentVC?.present(vpipic!, animated: true, completion: { () -> Void in
                 
             })
-            
         }
         
     }
