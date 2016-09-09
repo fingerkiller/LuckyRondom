@@ -54,7 +54,7 @@ class LKCandyDao: NSObject {
         
         dbq.lkDbBaseq?.inDatabase({ (dbp) -> Void in
             
-            _=try?dbp!.executeUpdate("insert into  Candy (BucketID,CandyID,CandyName,CandyimagePath) values (?,?,?,?)", values: [candy.bucketID!,candy.ID!,candy.name!,candy.imageName!])
+            _=try?dbp!.executeUpdate("insert into  Candy (BucketID,CandyID,CandyName,CandyimagePath) values (?,?,?,?)", values: [candy.bucketID!,candy.ID!,candy.name!,candy.imageName])
             
         })
     }
@@ -88,7 +88,7 @@ class LKCandyDao: NSObject {
         
         dbq.lkDbBaseq?.inDatabase({ (dbp) -> Void in
             
-            _=try?dbp!.executeUpdate("UPDATE Candy SET CandyName = ?,CandyimagePath=? where CandyID = ?", values: [candy.name!,candy.imageName!,candy.ID!]);
+            _=try?dbp!.executeUpdate("UPDATE Candy SET CandyName = ?,CandyimagePath=? where CandyID = ?", values: [candy.name!,candy.imageName,candy.ID!]);
             
         })
     }

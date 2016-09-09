@@ -90,7 +90,7 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
         
         if (self.imageView.image != nil)
         {
-            if(self.candy.imageName==nil)
+            if(self.candy.imageName.characters.count<=0)
             {
                 self.candy.imageName = NSObject.randomID();
             }
@@ -150,7 +150,7 @@ class LKCandyEditViewController: UITableViewController,UIImagePickerControllerDe
             self.imageView.center = CGPoint(x: self.view.frame.size.width/2.0, y: 150/2.0)
             self.imageView.backgroundColor = UIColor.red
             
-            if(self.candy.imageName != nil)
+            if(self.candy.imageName.characters.count<=0)
             {
                 let image = UIImage.init(contentsOfFile: (self.candy.imagePath)!)
                 self.imageView.image = image

@@ -14,15 +14,15 @@ public class LKCandy: NSObject {
     var ID:String?
     var name:String?
     
-    var imageName:String?
+    var imageName:String = ""
     
     var imagePath:String?{
         get{
-            if(imageName==nil)
+            if(imageName.characters.count<=0)
             {
                 return ""
             }
-            return FilePath() + "/" + imageName!;
+            return FilePath() + "/" + imageName;
         }
     }
     

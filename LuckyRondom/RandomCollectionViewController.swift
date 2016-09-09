@@ -127,7 +127,7 @@ class RandomCollectionViewController: UICollectionViewController {
         
         cell.titleLb.text = candy.name;
         
-        if(candy.imageName != nil)
+        if(candy.imageName.characters.count>0)
         {
             let image = UIImage.init(contentsOfFile: (candy.imagePath)!)
             cell.bkImage.image = image;
