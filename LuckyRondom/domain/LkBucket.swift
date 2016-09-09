@@ -65,7 +65,7 @@ class LkBucket: NSObject {
             
             let candy = self.sourceCandies[dex];
             
-            if((self.resultCandies?.contains(candy)) != false)
+            if((self.resultCandies?.contains(candy)) == true)
             {
                 continue
             }
