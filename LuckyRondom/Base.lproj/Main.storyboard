@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WMm-Xh-AzZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WMm-Xh-AzZ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--randoms-->
@@ -11,15 +11,15 @@
             <objects>
                 <tableViewController restorationIdentifier="a" id="Vws-aX-yQq" customClass="HomeViewController" customModule="LuckyRondom" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ss" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="rQt-7S-dqg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" id="xMC-ow-JNS">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="119.5" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xMC-ow-JNS" id="tpj-tr-UH4">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                    <frame key="frameInset" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -53,18 +53,20 @@
                         <viewControllerLayoutGuide type="bottom" id="65o-xg-J3U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IrL-cR-ZGI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-9o-CiB">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="623" id="KmV-oL-QaW"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="candycell" id="e3N-Gx-xz0">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3N-Gx-xz0" id="YLb-bZ-YEU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -78,7 +80,6 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE3-o2-k2r">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2bb-Sq-wFB"/>
                                     <barButtonItem systemItem="add" id="8vc-6Q-aei">
@@ -90,15 +91,14 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AE3-o2-k2r" firstAttribute="trailing" secondItem="qC4-9o-CiB" secondAttribute="trailing" id="F8p-DH-wda"/>
-                            <constraint firstItem="qC4-9o-CiB" firstAttribute="leading" secondItem="IrL-cR-ZGI" secondAttribute="leading" id="Kib-aV-0Np"/>
-                            <constraint firstItem="AE3-o2-k2r" firstAttribute="top" secondItem="qC4-9o-CiB" secondAttribute="bottom" id="glN-2x-ePl"/>
-                            <constraint firstItem="qC4-9o-CiB" firstAttribute="bottom" secondItem="65o-xg-J3U" secondAttribute="top" constant="-44" id="k6m-1r-KPU"/>
-                            <constraint firstAttribute="trailing" secondItem="qC4-9o-CiB" secondAttribute="trailing" id="v5u-Xb-VSj"/>
-                            <constraint firstItem="qC4-9o-CiB" firstAttribute="top" secondItem="IrL-cR-ZGI" secondAttribute="topMargin" id="xdM-JM-1BP"/>
-                            <constraint firstItem="AE3-o2-k2r" firstAttribute="leading" secondItem="qC4-9o-CiB" secondAttribute="leading" id="zOm-Sq-i7N"/>
+                            <constraint firstItem="qC4-9o-CiB" firstAttribute="leading" secondItem="AE3-o2-k2r" secondAttribute="leading" id="Gjj-l9-3HS"/>
+                            <constraint firstItem="qC4-9o-CiB" firstAttribute="top" secondItem="IrL-cR-ZGI" secondAttribute="top" id="KNl-Is-la7"/>
+                            <constraint firstItem="qC4-9o-CiB" firstAttribute="bottom" secondItem="AE3-o2-k2r" secondAttribute="top" id="ayg-2u-KQS"/>
+                            <constraint firstItem="qC4-9o-CiB" firstAttribute="leading" secondItem="IrL-cR-ZGI" secondAttribute="leading" id="fZj-8s-haI"/>
+                            <constraint firstAttribute="trailing" secondItem="qC4-9o-CiB" secondAttribute="trailing" id="faV-rq-rqQ"/>
+                            <constraint firstItem="qC4-9o-CiB" firstAttribute="trailing" secondItem="AE3-o2-k2r" secondAttribute="trailing" id="o2d-T7-bvK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="编辑" id="5GW-xd-zTo">
@@ -114,22 +114,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUS-WA-HJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-206" y="651"/>
+            <point key="canvasLocation" x="-207.19999999999999" y="650.82458770614699"/>
         </scene>
         <!--candy edit-->
         <scene sceneID="yne-v1-YSh">
             <objects>
                 <tableViewController id="Ukk-oU-sAu" customClass="LKCandyEditViewController" customModule="LuckyRondom" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="kIt-TR-M6i">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="candyeditCell" rowHeight="150" id="LFt-vA-7QY">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="119.5" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LFt-vA-7QY" id="jFr-dS-ajO">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                                    <frame key="frameInset" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -158,9 +158,9 @@
             <objects>
                 <collectionViewController id="JWD-Nr-St3" customClass="RandomCollectionViewController" customModule="LuckyRondom" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yat-Yh-NwN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vcq-Z0-Tcs">
                             <size key="itemSize" width="130" height="130"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -203,7 +203,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yvE-Zf-Sv2"/>
         <segue reference="d1V-4Z-xeO"/>
+        <segue reference="yvE-Zf-Sv2"/>
     </inferredMetricsTieBreakers>
 </document>
