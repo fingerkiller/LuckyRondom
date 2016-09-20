@@ -1,7 +1,7 @@
 //
 //  LKHelper.swift
 //  LuckyRondom
-// asdfasd
+//ås asdfasd
 //  Created by py on 16/2/16.
 //  Copyright © 2016年 py. All rights reserved.
 //
